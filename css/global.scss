@@ -1,0 +1,124 @@
+@import "bourbon/bourbon";
+
+// ==========================================================================
+// ★ VARIABLES
+// ==========================================================================
+
+// ==========================================================================
+// ★ RESETS
+// ==========================================================================
+a {
+  text-decoration: none;
+  font-weight: normal;
+}
+// ==========================================================================
+// ★ CUSTOM MIXINS
+// ==========================================================================
+@mixin opacity ( $value: 0.5 ) {
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=” $value * 100 “)";
+  filter: alpha(opacity= $value * 100 );
+  zoom: 1;
+}
+
+@mixin clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@mixin before ($width, $height, $display: block, $position: absolute) {
+  content: "";
+  display: $display;
+  position: $position;
+  @include size($width $height);
+}
+
+@mixin antialias {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+// ==========================================================================
+// ★ BREAKPOINTS VARIABLES
+// ==========================================================================
+$tablet: 950px;
+$mobile: 550px;
+
+// CUSTOM VARIABLES
+$transition: all ease-in-out .15s;
+// ==========================================================================
+// ★ HELPERS
+// ==========================================================================
+
+.ir {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+// ==========================================================================
+// ★ GENERAL
+// ==========================================================================
+html,
+body {
+  font-family: 'Ubuntu', sans-serif !important;
+  @include antialias;
+}
+
+.inner-wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// ==========================================================================
+// ★ CONTEST LIST
+// ==========================================================================
+.contests {
+  header {
+    background: #5bb7a2;
+    color: #fff;
+  }
+}
+
+.candidates-container {
+  background: #f9f9f9;
+  overflow: hidden;
+}
+
+.list-item {
+  display: block;
+  float: left;
+  background: #fff;
+
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow:    0px 1px 1px 0px rgba(0, 0, 0, 0.11);
+  box-shadow:         0px 1px 1px 0px rgba(0, 0, 0, 0.11);
+  border-radius: 2px;
+  @include box-sizing(border-box);
+}
+
+.grid-view {
+  width: 23.23176%;
+  max-width: 290px;
+  margin-right: 2.35765%;
+  margin-bottom: 10px;
+  &:nth-of-type(4n+1) {
+    margin-right: 0;
+  }
+}
+
+.list-view {
+  width: 45%;
+  max-width: 580px;
+  margin-right: 5%;
+  margin-bottom: 50px;
+  &:nth-of-type(2n+1) {
+    margin-right: 0;
+  }
+  img {
+    display: none;
+  }
+}

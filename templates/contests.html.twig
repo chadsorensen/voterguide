@@ -1,0 +1,19 @@
+<div class="contests">
+  <header>
+    <h4 class="inner-wrap">2014 Canidates &amp; Contests</h4>
+  </header>
+  <section class="candidates-container">
+    <div class="inner-wrap">
+      
+      <h2>{{ contests['#title'] }}</h2>
+      <div class="list-view-controls">
+        <button class="list" type="button">list</button>
+        <button class="full" type="button">full</button>
+      </div>
+      
+      {% for contest in contests %}
+        {{ contest }}
+      {% endfor %}
+    </div>
+  </section>
+</div>

@@ -1,0 +1,22 @@
+name: Voter Guide
+type: theme
+description: 'Initial theme files for the Voter Guide theme.'
+package: LiveBallot
+version: 7.3.0
+core: 8.x
+
+stylesheets:
+  all:
+    - css/global.css
+    - css/layout.css
+  print:
+    - css/print.css
+ckeditor_stylesheets:
+  - css/ckeditor-iframe.css
+regions:
+  header: Header
+  featured: Featured
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  content: Content
+  footer: Footer

@@ -1,0 +1,199 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the VoterGuide theme.
+ */
+
+use Drupal\Component\Utility\String;
+use Drupal\Component\Utility\Xss;
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_preprocess_HOOK() for page.html.twig.
+ *
+ * Adds body classes if certain regions have content.
+ */
+function voterguide_preprocess_page(&$variables) {
+  // Add information about the number of sidebars.
+  /** @var \Drupal\Core\Page\HtmlPage $page_object */
+  $page_object = $variables['page']['#page'];
+
+
+  $contests = array();
+  $contests[] = array(
+    '#theme' => 'contest',
+    '#name' => 'Candidate Name',
+    '#title' => 'President',
+    '#party' => 'Republican',
+    '#image' => 'http://www.placecage.com/c/300/200',
+    '#subtitle1' => 'and vice president',
+    '#subtitle2' => '4 year term',
+    '#candidate_action' => 'favorite',
+    '#text' => 'Text is usually used for questions and measures.',
+  );
+  $contests[] = array(
+    '#theme' => 'contest',
+    '#name' => 'Candidate Name2',
+    '#title' => 'US Representative',
+    '#party' => 'Democrat',
+    '#image' => 'http://www.fillmurray.com/300/200',
+    '#subtitle1' => '',
+    '#subtitle2' => '',
+    '#candidate_action' => 'save',
+    '#text' => '',
+  );
+  $contests[] = array(
+    '#theme' => 'contest',
+    '#name' => 'Candidate Name3',
+    '#title' => 'US Senator',
+    '#party' => 'Republican',
+    '#image' => 'http://www.stevensegallery.com/300/200',
+    '#subtitle1' => '',
+    '#subtitle2' => '',
+    '#candidate_action' => 'favorite',
+    '#text' => '',
+  );
+  $contests[] = array(
+    '#theme' => 'contest',
+    '#name' => 'Candidate Name4',
+    '#title' => 'President',
+    '#party' => 'Democrat',
+    '#image' => 'http://www.placecage.com/300/200',
+    '#subtitle1' => '',
+    '#subtitle2' => '',
+    '#candidate_action' => 'favorite',
+    '#text' => '',
+  );
+
+  $proposition = array();
+  $proposition[] = array(
+    '#theme' => 'proposition',
+    '#header' => 'Proposition 101',
+    '#body' => 'Shall Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    '#more_link' => '#!',
+    '#candidate_action' => 'favorite',
+  );
+
+  $index = array();
+  $index[] = array(
+    '#theme' => 'index',
+  );
+
+  $settings = array();
+  $settings[] = array(
+    '#theme' => 'settings',
+    '#name' => 'brian',
+    '#email' => 'brian@democracylive.com',
+    '#password' => 'brian',
+    '#address' => '123 address st city, state 1111-222',
+    '#facebook' => 'off',
+    '#link' => '#!view',
+  );
+
+  $footer = array();
+  $footer[] = array(
+    '#theme' => 'footer',
+    '#header' => 'Footer Header',
+    '#body' => 'Fill out the following',
+  );
+
+
+  $variables['page']['contests'] = array(
+    '#theme' => 'contests',
+    '#contests' => $contests,
+  );
+  $variables['page']['index'] = array(
+    '#theme' => 'index',
+    '#index' => $index,
+  );
+  $variables['page']['proposition'] = array(
+    '#theme' => 'proposition',
+    '#proposition' => $proposition,
+  );
+  $variables['page']['settings'] = array(
+    '#theme' => 'settings',
+    '#settings' => $settings,
+  );
+  $variables['page']['footer'] = array(
+    '#theme' => 'footer',
+    '#footer' => $footer,
+  );
+}
+
+function voterguide_css_alter(&$css) {
+  $theme_path = drupal_get_path('theme', 'voterguide'); // Add googlefonts.
+  $googlefonts = '//fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic';
+  $css[$googlefonts] = array(
+    'data' => $googlefonts,
+    'type' => 'external',
+    'every_page' => TRUE,
+    'media' => 'all',
+    'preprocess' => FALSE,
+    'group' => CSS_AGGREGATE_THEME,
+    'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+    'weight' => -1, );
+}
+
+function voterguide_preprocess_contests(&$variables) {
+  $count = count($variables['contests']);
+  $variables['count'] = $count;
+}
+
+function voterguide_theme() {
+  return array(
+    'contests' => array(
+      'variables' => array(
+        'contests' => NULL,
+      ),
+      'template' => 'contests',
+    ),
+    'index' => array(
+      'variables' => array(
+        'header' => 'header text',
+        'body' => NULL,
+      ),
+      'template' => 'index',
+    ),
+    'proposition' => array(
+      'variables' => array(
+        'header' => 'header text',
+        'body' => NULL,
+        'more_link' => NULL,
+        'candidate_action' => NULL,
+      ),
+      'template' => 'proposition',
+    ),
+    'contest' => array(
+      'variables' => array(
+        'name' => NULL,
+        'title' => NULL,
+        'image' => NULL,
+        'party' => NULL,
+        'subtitle1' => NULL,
+        'subtitle2' => NULL,
+        'candidate_action' => NULL,
+        'text' => NULL,
+      ),
+      'template' => 'contest',
+    ),
+    'settings' => array(
+      'variables' => array(
+        'name' => NULL,
+        'email' => NULL,
+        'link' => NULL,
+        'password' => NULL,
+        'location' => NULL,
+        'facebook' => NULL,
+      ),
+      'template' => 'settings',
+    ),
+    'footer' => array(
+      'variables' => array(
+        'header' => 'header text',
+        'body' => NULL,
+      ),
+      'template' => 'footer',
+    ),
+  );
+}
