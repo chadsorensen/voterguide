@@ -19,7 +19,6 @@ function voterguide_preprocess_page(&$variables) {
   /** @var \Drupal\Core\Page\HtmlPage $page_object */
   $page_object = $variables['page']['#page'];
 
-
   $contests = array();
   $contests[] = array(
     '#theme' => 'contest',
@@ -97,7 +96,6 @@ function voterguide_preprocess_page(&$variables) {
     '#header' => 'Footer Header',
     '#body' => 'Fill out the following',
   );
-
 
   $variables['page']['contests'] = array(
     '#theme' => 'contests',

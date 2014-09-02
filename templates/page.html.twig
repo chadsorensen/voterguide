@@ -37,38 +37,45 @@
     {% endif %} #}
     <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" id="logo">Alaska Voter Guide <span>The Most informed Voters In The U.S.</span></a>
 
-    <div class="page-header">
+    <nav id="main-links">
+      <a href="#!" title="Log In">Log In</a>
+      <a href="#!" title="Sign Up">Sign Up</a>
+      <div class="social">
+        <span>share</span>
+        <a href="#!" title="Twitter">Twitter</a>
+        <a href="#!" title="Facebook">Facebook</a>
+        <a href="#!" title="LinkedIn">LinkedIn</a>
+        <a href="#!" title="Google+">Google+</a>
+      </div>
+    </nav>
 
-    {{ page.header }}
-    </div>
-
-    {% if main_menu %}
+<!--     {% if main_menu %}
       <nav id ="main-menu" class="navigation" role="navigation" aria-labelledby="links__system_main_menu">
         <div id="nav"></div>
         <div id="no-nav"></div>
         <a class="main-menu-reveal" href="#nav">{{ 'Menu'|t }}</a>
         <a class="main-menu-reveal main-menu-reveal--hide" href="#no-nav">{{ 'Menu'|t }}</a>
         {{ main_menu }}
-      </nav> <!-- /#main-menu -->
-    {% endif %}
+      </nav>
+    {% endif %} -->
   </div></header> <!-- /.section, /#header-->
-
+<!--
   {% if messages %}
     <div id="messages"><div class="section clearfix">
       {{ messages }}
-    </div></div> <!-- /.section, /#messages -->
+    </div></div>
   {% endif %}
 
   {% if page.featured %}
     <aside id="featured"><div class="section clearfix">
       {{ page.featured }}
-    </div></aside> <!-- /.section, /#featured -->
-  {% endif %}
+    </div></aside>
+  {% endif %} -->
 
   <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
 
     <main id="content" class="column" role="main"><section class="section">
-      <a id="main-content" tabindex="-1"></a>
+<!--       <a id="main-content" tabindex="-1"></a>
       {{ title_prefix }}
         {% if title %}
           <h1 class="title" id="page-title">
@@ -86,11 +93,10 @@
           <ul class="action-links">
             {{ action_links }}
           </ul>
-        {% endif %}
-      <section id="index">
-        <h1>Index</h1>
-        {{ page.index }}
-      </section>
+        {% endif %} -->
+
+      {{ page.index }}
+
       {{ page.contests }}
       <h1>prop</h1>
       {{ page.proposition }}

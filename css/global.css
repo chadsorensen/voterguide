@@ -1,6 +1,31 @@
+div,
+section,
+aside {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+  line-height: .8; }
+
 a {
   text-decoration: none;
-  font-weight: normal; }
+  font-weight: normal;
+  color: #5bb7a2; }
+
+.em {
+  font-weight: 500; }
+
+.italic {
+  text-decoration: italic; }
 
 .ir {
   border: 0;
@@ -17,8 +42,130 @@ body {
 
 .inner-wrap {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto; }
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+#header {
+  color: #66696c;
+  font-weight: 500;
+  font-size: 17px; }
+  #header #logo {
+    color: #5bb7a2;
+    font-weight: 500;
+    font-size: 36px; }
+    #header #logo span {
+      display: block;
+      font-size: 14px;
+      font-weight: 300;
+      color: #8f989c; }
+
+#home {
+  width: 100%;
+  padding: 100px 0;
+  background: url(../images/home-background.jpg) no-repeat;
+  background-size: cover; }
+  #home h2 {
+    margin: 0 0 30px 0;
+    color: #555;
+    font-size: 56px;
+    font-weight: 300;
+    text-align: center; }
+  #home form {
+    position: relative;
+    background: #fff;
+    border-radius: 3px; }
+  #home label {
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    left: 0;
+    display: block;
+    background: #5bb7a2;
+    border-radius: 3px 0 0 3px; }
+  #home .inline input[type=text] {
+    display: block;
+    float: left;
+    width: 29%;
+    max-width: 330px; }
+    #home .inline input[type=text].address {
+      padding-left: 60px; }
+  #home .divider {
+    position: relative;
+    top: 9px;
+    display: block;
+    float: left;
+    height: 30px;
+    width: 1px;
+    background: #bec0c2; }
+  #home .submit {
+    width: 10%;
+    height: 48px;
+    position: absolute;
+    right: 0;
+    background: #5bb7a2;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0 3px 3px 0; }
+  #home .find-your-ballot p {
+    padding: 0 25px;
+    font-weight: 300;
+    color: #555;
+    text-align: center; }
+    #home .find-your-ballot p a {
+      color: #555; }
+
+.promo {
+  display: block;
+  float: left;
+  width: 60%;
+  max-width: 627px;
+  padding: 30px 35px;
+  background: url(../images/promo-background.png) no-repeat;
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px; }
+  .promo h3 {
+    font-size: 40px; }
+  .promo p {
+    padding: 25px 0; }
+  .promo .italics {
+    padding: 5px 0 0; }
+
+.footer-tagline {
+  width: 100%;
+  background: url(../images/footer-tagline-background.jpg) no-repeat;
+  padding: 50px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 300; }
+  .footer-tagline h4 {
+    text-transform: capitalize; }
+
+form {
+  display: block;
+  height: 48px; }
+
+input {
+  margin: 0;
+  padding: 12px;
+  border: none;
+  color: #a6a9ad;
+  font-weight: 300;
+  font-size: 20px; }
+  input.icon {
+    position: relative;
+    padding-left: 66px; }
+    input.icon:before {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 66px;
+      width: 66px;
+      background: #5bb7a2; }
 
 .contests header {
   background: #5bb7a2;

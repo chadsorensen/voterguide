@@ -3,13 +3,38 @@
 // ==========================================================================
 // ★ VARIABLES
 // ==========================================================================
-
+$green: #5bb7a2;
+$gray: #8f989c;
+$darkGray: #66696c;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
 // ==========================================================================
 // ★ RESETS
 // ==========================================================================
+div,
+section,
+aside {
+  @include box-sizing(border-box);
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+  line-height: .8;
+}
+
 a {
   text-decoration: none;
   font-weight: normal;
+  color: $green;
 }
 // ==========================================================================
 // ★ CUSTOM MIXINS
@@ -50,6 +75,13 @@ $transition: all ease-in-out .15s;
 // ==========================================================================
 // ★ HELPERS
 // ==========================================================================
+.em {
+  font-weight: $medium;
+}
+
+.italic {
+  text-decoration: italic;
+}
 
 .ir {
   border: 0;
@@ -69,8 +101,154 @@ body {
 
 .inner-wrap {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
+  overflow: hidden;
+}
+
+// ==========================================================================
+// ★ HEADER
+// ==========================================================================
+#header {
+  color: $darkGray;
+  font-weight: $medium;
+  font-size: 17px;
+  #logo {
+    color: $green;
+    font-weight: $medium;
+    font-size: 36px;
+    span {
+      display: block;
+      font-size: 14px;
+      font-weight: $light;
+      color: $gray;
+    }
+  }
+}
+
+// ==========================================================================
+// ★ HOME PAGE
+// ==========================================================================
+#home {
+  width: 100%;
+  padding: 100px 0;
+  background: url(../images/home-background.jpg) no-repeat;
+  background-size: cover;
+  h2 {
+    margin: 0 0 30px 0;
+    color: #555;
+    font-size: 56px;
+    font-weight: $light;
+    text-align: center;
+  }
+  form {
+    position: relative;
+    background: #fff;
+    border-radius: 3px;
+  }
+  label {
+    @include size(48px);
+    position: absolute;
+    left: 0;
+    display: block;
+    background: $green;
+    border-radius: 3px 0 0 3px;
+  }
+  .inline input[type=text] {
+    display: block;
+    float: left;
+    width: 29%;
+    max-width: 330px;
+    &.address {
+      padding-left: 60px;
+    }
+  }
+  .divider {
+    position: relative;
+    top: 9px;
+    display: block;
+    float: left;
+    @include size(1px 30px);
+    background: #bec0c2;
+  }
+  .submit {
+    width: 10%;
+    height: 48px;
+    position: absolute;
+    right: 0;
+    background: $green;
+    color: #fff;
+    font-weight: $medium;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0 3px 3px 0;
+  }
+  .find-your-ballot p {
+    padding: 0 25px;
+    font-weight: $light;
+    color: #555;
+    text-align: center;
+    a {
+      color: #555;
+    }
+  }
+}
+
+.promo {
+  display: block;
+  float: left;
+  width: 60%;
+  max-width: 627px;
+  padding: 30px 35px;
+  background: url(../images/promo-background.png) no-repeat;
+  color: #fff;
+  font-weight: $light;
+  font-size: 14px;
+  h3 {
+    font-size: 40px;
+  }
+  p {
+    padding: 25px 0;
+  }
+  .italics {
+    padding: 5px 0 0;
+
+  }
+}
+
+.footer-tagline {
+  width: 100%;
+  background: url(../images/footer-tagline-background.jpg) no-repeat;
+  padding: 50px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: $light;
+  h4 {
+    text-transform: capitalize;
+  }
+}
+
+// Forms
+form {
+  display: block;
+  height: 48px;
+}
+input {
+  margin: 0;
+  padding: 12px;
+  border: none;
+  color: #a6a9ad;
+  font-weight: $light;
+  font-size: 20px;
+  &.icon {
+    position: relative;
+    padding-left: 66px;
+    &:before {
+      @include before(66px, 66px);
+      background: $green;
+    }
+  }
 }
 
 // ==========================================================================
