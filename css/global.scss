@@ -15,7 +15,8 @@ $bold: 700;
 // ==========================================================================
 div,
 section,
-aside {
+aside,
+input {
   @include box-sizing(border-box);
   overflow: hidden;
 }
@@ -24,11 +25,16 @@ h1,
 h2,
 h3,
 h4,
-h5,
-p {
+h5 {
   margin: 0;
   padding: 0;
   line-height: .8;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
 }
 
 a {
@@ -110,21 +116,47 @@ body {
 // ★ HEADER
 // ==========================================================================
 #header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 0;
   color: $darkGray;
   font-weight: $medium;
   font-size: 17px;
-  #logo {
-    color: $green;
-    font-weight: $medium;
-    font-size: 36px;
-    span {
-      display: block;
-      font-size: 14px;
-      font-weight: $light;
-      color: $gray;
-    }
+  overflow: hidden;
+}
+#logo {
+  display: block;
+  float: left;
+  color: $green;
+  font-weight: $medium;
+  font-size: 36px;
+  span {
+    display: block;
+    font-size: 14px;
+    font-weight: $light;
+    color: $gray;
+    clear: left;
   }
 }
+
+#main-links {
+  display: block;
+  float: right;
+  margin-top: 15px;
+  span,
+  a {
+    display: block;
+    float: left;
+    margin-right: 15px;
+    padding-right: 15px;
+    color: #66696c;
+  }
+  .account-link {
+    border-right: 1px solid #dcdddd;
+  }
+}
+
 
 // ==========================================================================
 // ★ HOME PAGE
@@ -146,10 +178,9 @@ body {
     background: #fff;
     border-radius: 3px;
   }
-  label {
-    @include size(48px);
-    position: absolute;
-    left: 0;
+  .inline label {
+    @include size(65px);
+    float: left;
     display: block;
     background: $green;
     border-radius: 3px 0 0 3px;
@@ -157,10 +188,17 @@ body {
   .inline input[type=text] {
     display: block;
     float: left;
-    width: 29%;
-    max-width: 330px;
+    padding-left: 25px;
     &.address {
-      padding-left: 60px;
+      width: 310px;
+    }
+    &.city {
+      width: 265px;
+      
+    }
+    &.zipcode {
+      width: 210px;
+
     }
   }
   .divider {
@@ -168,23 +206,25 @@ body {
     top: 9px;
     display: block;
     float: left;
-    @include size(1px 30px);
+    @include size(1px 49px);
     background: #bec0c2;
   }
   .submit {
-    width: 10%;
-    height: 48px;
-    position: absolute;
-    right: 0;
+    display: block;
+    float: left;
+    width: 148px;
+    height: 65px;
     background: $green;
+    padding-right: 40px;
+    padding-left: 40px;
     color: #fff;
-    font-weight: $medium;
-    font-size: 14px;
+    font-weight: $light;
+    font-size: 18px;
     text-transform: uppercase;
     border-radius: 0 3px 3px 0;
   }
   .find-your-ballot p {
-    padding: 0 25px;
+    padding: 25px 25px 80px;
     font-weight: $light;
     color: #555;
     text-align: center;
@@ -199,20 +239,94 @@ body {
   float: left;
   width: 60%;
   max-width: 627px;
+  max-height: 300px;
   padding: 30px 35px;
   background: url(../images/promo-background.png) no-repeat;
   color: #fff;
   font-weight: $light;
   font-size: 14px;
+  border-radius: 3px;
   h3 {
+    font-weight: $light;
     font-size: 40px;
+    span {
+      font-weight: $medium;
+    }
   }
   p {
     padding: 25px 0;
+    line-height: 2;
   }
   .italics {
     padding: 5px 0 0;
 
+  }
+}
+
+.account-sidebar {
+  display: block;
+  float: right;
+  width: 38%;
+  max-height: 300px;
+  max-width: 360px;
+  background: #fff;
+  padding: 35px 30px 30px 35px;
+  border-radius: 3px;
+  h3 {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #555;
+    font-weight: $light;
+    font-size: 40px;
+  }
+  a {
+    display: block;
+    float: right;
+    margin-top: 17px;
+    color: #555;
+    font-size: 14px;
+    font-weight: $bold;
+  }
+  .input-holder {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    label {
+      display: block;
+      float: left;
+      @include size(50px);
+      display: block;
+      background: #dcddde;
+      border-radius: 3px 0 0 3px;
+    }
+  }
+  input {
+    display: block;
+    float: left;
+    margin-bottom: 10px;
+    max-width: 245px;
+    height: 50px;
+    color: #a6a9ad;
+    font-size: 16px;
+    font-weight: $light;
+    border: 1px solid #dcddde;
+    border-radius: 0 3px 3px 0;
+    &:focus {
+      border: 1px solid $green;
+      outline: $green;
+    }
+  }
+  input[type="submit"] {
+    display: block;
+    margin-top: 10px;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    background: $darkGray;
+    color: #fff;
+    font-weight: $regular;
+    text-transform: uppercase;
+    border-radius: 3px;
   }
 }
 
@@ -232,20 +346,19 @@ body {
 // Forms
 form {
   display: block;
-  height: 48px;
 }
 input {
   margin: 0;
-  padding: 12px;
+  padding: 20px 12px;
   border: none;
   color: #a6a9ad;
   font-weight: $light;
   font-size: 20px;
   &.icon {
     position: relative;
-    padding-left: 66px;
+    padding-left: 65px;
     &:before {
-      @include before(66px, 66px);
+      @include before(65px, 65px);
       background: $green;
     }
   }

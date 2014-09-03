@@ -1,6 +1,7 @@
 div,
 section,
-aside {
+aside,
+input {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -10,11 +11,15 @@ h1,
 h2,
 h3,
 h4,
-h5,
-p {
+h5 {
   margin: 0;
   padding: 0;
   line-height: .8; }
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5; }
 
 a {
   text-decoration: none;
@@ -47,18 +52,41 @@ body {
   overflow: hidden; }
 
 #header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 0;
   color: #66696c;
   font-weight: 500;
-  font-size: 17px; }
-  #header #logo {
-    color: #5bb7a2;
-    font-weight: 500;
-    font-size: 36px; }
-    #header #logo span {
-      display: block;
-      font-size: 14px;
-      font-weight: 300;
-      color: #8f989c; }
+  font-size: 17px;
+  overflow: hidden; }
+
+#logo {
+  display: block;
+  float: left;
+  color: #5bb7a2;
+  font-weight: 500;
+  font-size: 36px; }
+  #logo span {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    color: #8f989c;
+    clear: left; }
+
+#main-links {
+  display: block;
+  float: right;
+  margin-top: 15px; }
+  #main-links span,
+  #main-links a {
+    display: block;
+    float: left;
+    margin-right: 15px;
+    padding-right: 15px;
+    color: #66696c; }
+  #main-links .account-link {
+    border-right: 1px solid #dcdddd; }
 
 #home {
   width: 100%;
@@ -75,42 +103,46 @@ body {
     position: relative;
     background: #fff;
     border-radius: 3px; }
-  #home label {
-    height: 48px;
-    width: 48px;
-    position: absolute;
-    left: 0;
+  #home .inline label {
+    height: 65px;
+    width: 65px;
+    float: left;
     display: block;
     background: #5bb7a2;
     border-radius: 3px 0 0 3px; }
   #home .inline input[type=text] {
     display: block;
     float: left;
-    width: 29%;
-    max-width: 330px; }
+    padding-left: 25px; }
     #home .inline input[type=text].address {
-      padding-left: 60px; }
+      width: 310px; }
+    #home .inline input[type=text].city {
+      width: 265px; }
+    #home .inline input[type=text].zipcode {
+      width: 210px; }
   #home .divider {
     position: relative;
     top: 9px;
     display: block;
     float: left;
-    height: 30px;
+    height: 49px;
     width: 1px;
     background: #bec0c2; }
   #home .submit {
-    width: 10%;
-    height: 48px;
-    position: absolute;
-    right: 0;
+    display: block;
+    float: left;
+    width: 148px;
+    height: 65px;
     background: #5bb7a2;
+    padding-right: 40px;
+    padding-left: 40px;
     color: #fff;
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 300;
+    font-size: 18px;
     text-transform: uppercase;
     border-radius: 0 3px 3px 0; }
   #home .find-your-ballot p {
-    padding: 0 25px;
+    padding: 25px 25px 80px;
     font-weight: 300;
     color: #555;
     text-align: center; }
@@ -122,17 +154,83 @@ body {
   float: left;
   width: 60%;
   max-width: 627px;
+  max-height: 300px;
   padding: 30px 35px;
   background: url(../images/promo-background.png) no-repeat;
   color: #fff;
   font-weight: 300;
-  font-size: 14px; }
+  font-size: 14px;
+  border-radius: 3px; }
   .promo h3 {
+    font-weight: 300;
     font-size: 40px; }
+    .promo h3 span {
+      font-weight: 500; }
   .promo p {
-    padding: 25px 0; }
+    padding: 25px 0;
+    line-height: 2; }
   .promo .italics {
     padding: 5px 0 0; }
+
+.account-sidebar {
+  display: block;
+  float: right;
+  width: 38%;
+  max-height: 300px;
+  max-width: 360px;
+  background: #fff;
+  padding: 35px 30px 30px 35px;
+  border-radius: 3px; }
+  .account-sidebar h3 {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #555;
+    font-weight: 300;
+    font-size: 40px; }
+  .account-sidebar a {
+    display: block;
+    float: right;
+    margin-top: 17px;
+    color: #555;
+    font-size: 14px;
+    font-weight: 700; }
+  .account-sidebar .input-holder {
+    display: block;
+    position: relative;
+    overflow: hidden; }
+    .account-sidebar .input-holder label {
+      display: block;
+      float: left;
+      height: 50px;
+      width: 50px;
+      display: block;
+      background: #dcddde;
+      border-radius: 3px 0 0 3px; }
+  .account-sidebar input {
+    display: block;
+    float: left;
+    margin-bottom: 10px;
+    max-width: 245px;
+    height: 50px;
+    color: #a6a9ad;
+    font-size: 16px;
+    font-weight: 300;
+    border: 1px solid #dcddde;
+    border-radius: 0 3px 3px 0; }
+    .account-sidebar input:focus {
+      border: 1px solid #5bb7a2;
+      outline: #5bb7a2; }
+  .account-sidebar input[type="submit"] {
+    display: block;
+    margin-top: 10px;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    background: #66696c;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 3px; }
 
 .footer-tagline {
   width: 100%;
@@ -146,25 +244,24 @@ body {
     text-transform: capitalize; }
 
 form {
-  display: block;
-  height: 48px; }
+  display: block; }
 
 input {
   margin: 0;
-  padding: 12px;
+  padding: 20px 12px;
   border: none;
   color: #a6a9ad;
   font-weight: 300;
   font-size: 20px; }
   input.icon {
     position: relative;
-    padding-left: 66px; }
+    padding-left: 65px; }
     input.icon:before {
       content: "";
       display: block;
       position: absolute;
-      height: 66px;
-      width: 66px;
+      height: 65px;
+      width: 65px;
       background: #5bb7a2; }
 
 .contests header {

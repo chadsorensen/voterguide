@@ -19,12 +19,18 @@
       <p class="italic">To save your notes and likes, you must first create an account.  <a href="#!" title="Sign Up Today!">Sign Up Today!</a></p>
     </div>
 
-    <aside>
+    <aside class="account-sidebar">
       <h3>Log In</h3>
-      <a href="#!" title="">Create account</a>
+      <a href="#!" title="">Create Account</a>
       <form action="log_in" method="get" accept-charset="utf-8">
-        <input type="email" name="" value="" placeholder="Email Address">
-        <input type="password" name="" value="" placeholder="Password">
+        <div class="input-holder">
+          <label class="ir">email address</label>
+          <input class="email" type="email" name="" value="" placeholder="Email Address">
+        </div>
+        <div class="input-holder">
+          <label class="ir">password</label>
+          <input class="password" type="password" name="" value="" placeholder="Password">
+        </div>
         <input type="submit" name="" value="Log In">
       </form>
     </aside>
