@@ -86,7 +86,7 @@ $transition: all ease-in-out .15s;
 }
 
 .italic {
-  text-decoration: italic;
+  font-style: italic;
 }
 
 .ir {
@@ -177,6 +177,7 @@ body {
     position: relative;
     background: #fff;
     border-radius: 3px;
+    overflow: hidden;
   }
   .inline label {
     @include size(65px);
@@ -240,8 +241,8 @@ body {
   width: 60%;
   max-width: 627px;
   max-height: 300px;
-  padding: 30px 35px;
-  background: url(../images/promo-background.png) no-repeat;
+  padding: 30px 35px 40px;
+  @include linear-gradient(#373936, #3f434c, #464646);
   color: #fff;
   font-weight: $light;
   font-size: 14px;
@@ -257,8 +258,8 @@ body {
     padding: 25px 0;
     line-height: 2;
   }
-  .italics {
-    padding: 5px 0 0;
+  .italic {
+    padding: 5px 0;
 
   }
 }

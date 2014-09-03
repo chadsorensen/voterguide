@@ -30,7 +30,7 @@ a {
   font-weight: 500; }
 
 .italic {
-  text-decoration: italic; }
+  font-style: italic; }
 
 .ir {
   border: 0;
@@ -102,7 +102,8 @@ body {
   #home form {
     position: relative;
     background: #fff;
-    border-radius: 3px; }
+    border-radius: 3px;
+    overflow: hidden; }
   #home .inline label {
     height: 65px;
     width: 65px;
@@ -155,8 +156,10 @@ body {
   width: 60%;
   max-width: 627px;
   max-height: 300px;
-  padding: 30px 35px;
-  background: url(../images/promo-background.png) no-repeat;
+  padding: 30px 35px 40px;
+  background-color: #373936;
+  background-image: -webkit-linear-gradient(#373936, #3f434c, #464646);
+  background-image: linear-gradient(#373936, #3f434c, #464646);
   color: #fff;
   font-weight: 300;
   font-size: 14px;
@@ -169,8 +172,8 @@ body {
   .promo p {
     padding: 25px 0;
     line-height: 2; }
-  .promo .italics {
-    padding: 5px 0 0; }
+  .promo .italic {
+    padding: 5px 0; }
 
 .account-sidebar {
   display: block;
