@@ -1,15 +1,18 @@
 @import "bourbon/bourbon";
-
+@import "icons";
 // ==========================================================================
 // ★ VARIABLES
 // ==========================================================================
 $green: #5bb7a2;
 $gray: #8f989c;
 $darkGray: #66696c;
+
 $light: 300;
 $regular: 400;
 $medium: 500;
 $bold: 700;
+
+$transition: all ease-in-out .15s;
 // ==========================================================================
 // ★ RESETS
 // ==========================================================================
@@ -76,8 +79,6 @@ a {
 $tablet: 950px;
 $mobile: 550px;
 
-// CUSTOM VARIABLES
-$transition: all ease-in-out .15s;
 // ==========================================================================
 // ★ HELPERS
 // ==========================================================================
@@ -94,6 +95,25 @@ $transition: all ease-in-out .15s;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.header-1 {
+  font-weight: $light;
+  font-size: 56px;
+}
+
+.header-2 {
+  font-weight: $light;
+  font-size: 40px;
+}
+
+.header-3 {
+  font-weight: $light;
+  font-size: 30px;
 }
 
 // ==========================================================================
@@ -144,13 +164,33 @@ body {
   display: block;
   float: right;
   margin-top: 15px;
+  overflow: visible;
   span,
   a {
-    display: block;
-    float: left;
+    display: inline-block;
     margin-right: 15px;
     padding-right: 15px;
     color: #66696c;
+    @include transition(color .15s ease-out);
+  }
+  .social {
+    display: inline-block;
+    overflow: visible;
+  }
+  .icon {
+    position: relative;
+    top: 10px;
+    margin-right: 5px;
+    padding-right: 0;
+    @include size(32px);
+    color: #dcddde;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .icon:hover,
+  a:hover {
+    color: $green;
   }
   .account-link {
     border-right: 1px solid #dcdddd;
@@ -288,10 +328,24 @@ body {
     font-size: 14px;
     font-weight: $bold;
   }
+  form {
+    overflow: visible;
+  }
   .input-holder {
     display: block;
     position: relative;
+    margin-bottom: 10px;
     overflow: hidden;
+    &.focus {
+      box-shadow: 0px 0px 5px $green;
+      outline: 0;
+      label {
+        background: $green;
+      }
+      input {
+        border: 1px solid $green;
+      }
+    }
     label {
       display: block;
       float: left;
@@ -301,10 +355,12 @@ body {
       border-radius: 3px 0 0 3px;
     }
   }
+  .icon {
+    font-size: 25px;
+  }
   input {
     display: block;
     float: left;
-    margin-bottom: 10px;
     max-width: 245px;
     height: 50px;
     color: #a6a9ad;
@@ -312,10 +368,7 @@ body {
     font-weight: $light;
     border: 1px solid #dcddde;
     border-radius: 0 3px 3px 0;
-    &:focus {
-      border: 1px solid $green;
-      outline: $green;
-    }
+
   }
   input[type="submit"] {
     display: block;
@@ -329,6 +382,10 @@ body {
     text-transform: uppercase;
     border-radius: 3px;
   }
+}
+
+.banner {
+  padding-top: 20px;
 }
 
 .footer-tagline {
@@ -370,23 +427,40 @@ input {
 // ==========================================================================
 .contests {
   header {
+    padding: 25px 0;
     background: #5bb7a2;
     color: #fff;
+  }
+  h3 {
+    font-weight: $medium;
+    font-size: 20px;
   }
 }
 
 .candidates-container {
+  padding-top: 60px;
   background: #f9f9f9;
   overflow: hidden;
+  h2 {
+    display: block;
+    float: left;
+    padding-top: 10px; 
+  }
+  .list-view-container {
+    display: block;
+    float: right;
+    button {
+      margin-right: 10px;
+    }
+  }
 }
+
 
 .list-item {
   display: block;
   float: left;
+  margin-top: 40px;
   background: #fff;
-
-  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.11);
-  -moz-box-shadow:    0px 1px 1px 0px rgba(0, 0, 0, 0.11);
   box-shadow:         0px 1px 1px 0px rgba(0, 0, 0, 0.11);
   border-radius: 2px;
   @include box-sizing(border-box);

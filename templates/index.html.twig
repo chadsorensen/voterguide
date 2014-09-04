@@ -2,9 +2,9 @@
   <div class="inner-wrap">
 
     <div class="find-your-ballot">
-      <h2>Find Your Ballot</h2>
+      <h2 class="header-1">Find Your Ballot</h2>
       <form class="inline" action="ballot" method="get" accept-charset="utf-8">
-        <label class="ir">address</label>
+        <label class="icon centered i-pin" for="address"></label>
         <input class="address" type="text" placeholder="Address"><span class="divider"></span>
         <input class="city" type="text" placeholder="City, State"><span class="divider"></span>
         <input class="zipcode" type="text" placeholder="Zip Code" pattern="\d*">
@@ -14,29 +14,29 @@
     </div>
 
     <div class="promo">
-      <h3>What Is <span class="em">Voter Guide</span>?</h3>
+      <h3 class="header-2">What Is <span class="em">Voter Guide</span>?</h3>
       <p>YourBallot&trade; is an online balloting technology that makes it easy for voters to stay informed. Sed commodo ultricies diam, quis aliquam tellus facilisis a. Nam vel ante eget nisi iaculis ullamcorper. Etiam in pellentesque sem, at mollis velit. Nullam blandit eleifend commodo.</p>
       <p class="italic">To save your notes and likes, you must first create an account.  <a href="#!" title="Sign Up Today!">Sign Up Today!</a></p>
     </div>
 
     <aside class="account-sidebar">
-      <h3>Log In</h3>
+      <h3 class="header-2">Log In</h3>
       <a href="#!" title="">Create Account</a>
       <form action="log_in" method="get" accept-charset="utf-8">
-        <div class="input-holder">
-          <label class="ir">email address</label>
+        <div class="input-holder" tabindex="0">
+          <label class="icon centered i-user-1" for="email"></label>
           <input class="email" type="email" name="" value="" placeholder="Email Address">
         </div>
-        <div class="input-holder">
-          <label class="ir">password</label>
+        <div class="input-holder" tabindex="0">
+          <label class="icon centered i-lock" for="password"></label>
           <input class="password" type="password" name="" value="" placeholder="Password">
         </div>
         <input type="submit" name="" value="Log In">
       </form>
     </aside>
 
-    <div class="banner">
-      <img src="../images/ad.jpg" width="1000" alt="">
+    <div class="banner clearfix">
+      <img src="themes/voterguide/images/ad.jpg" width="1000" alt="">
     </div>
 
 
@@ -44,5 +44,5 @@
 </div>
 
 <div class="footer-tagline">
-  <h4>making it easier to <span class="em">stay informed</span></h4>
+  <h4 class="header-3">making it easier to <span class="em">stay informed</span></h4>
 </div>

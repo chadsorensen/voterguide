@@ -9,8 +9,10 @@ stylesheets:
   all:
     - css/global.css
     - css/layout.css
+    - css/icons.css
   print:
     - css/print.css
+
 ckeditor_stylesheets:
   - css/ckeditor-iframe.css
 regions:
