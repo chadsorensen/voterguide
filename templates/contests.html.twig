@@ -4,16 +4,17 @@
   </header>
   <section class="candidates-container">
     <div class="inner-wrap">
-      
+
       <h2 class="header-2">U.S. President</h2>
       <div class="list-view-controls">
         <button class="list" type="button">list</button>
         <button class="full" type="button">full</button>
       </div>
-      
+      <div class="list-container clearfix">
       {% for contest in contests %}
         {{ contest }}
       {% endfor %}
+      </div>
     </div>
   </section>
 </div>

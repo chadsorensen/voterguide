@@ -235,7 +235,7 @@ body {
     }
     &.city {
       width: 265px;
-      
+
     }
     &.zipcode {
       width: 210px;
@@ -422,6 +422,13 @@ input {
   }
 }
 
+.promo,
+.promo img {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+}
+
 // ==========================================================================
 // ★ CONTEST LIST
 // ==========================================================================
@@ -444,7 +451,7 @@ input {
   h2 {
     display: block;
     float: left;
-    padding-top: 10px; 
+    padding-top: 10px;
   }
   .list-view-container {
     display: block;
@@ -455,6 +462,9 @@ input {
   }
 }
 
+.list-container {
+
+}
 
 .list-item {
   display: block;
@@ -471,7 +481,7 @@ input {
   max-width: 290px;
   margin-right: 2.35765%;
   margin-bottom: 10px;
-  &:nth-of-type(4n+1) {
+  &:nth-of-type(4n) {
     margin-right: 0;
   }
 }

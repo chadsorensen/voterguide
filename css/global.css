@@ -420,6 +420,12 @@ input {
       width: 65px;
       background: #5bb7a2; }
 
+.promo,
+.promo img {
+  display: block;
+  width: 100%;
+  max-width: 1000px; }
+
 .contests header {
   padding: 25px 0;
   background: #5bb7a2;
@@ -458,7 +464,7 @@ input {
   max-width: 290px;
   margin-right: 2.35765%;
   margin-bottom: 10px; }
-  .grid-view:nth-of-type(4n+1) {
+  .grid-view:nth-of-type(4n) {
     margin-right: 0; }
 
 .list-view {
