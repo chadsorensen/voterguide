@@ -28,7 +28,7 @@ function voterguide_preprocess_page(&$variables) {
     '#image' => 'http://www.placecage.com/c/300/200',
     '#subtitle1' => 'and vice president',
     '#subtitle2' => '4 year term',
-    '#candidate_action' => 'favorite',
+    '#candidate_action' => 'Favorite',
     '#text' => 'Text is usually used for questions and measures.',
   );
   $contests[] = array(
@@ -39,7 +39,7 @@ function voterguide_preprocess_page(&$variables) {
     '#image' => 'http://www.fillmurray.com/300/200',
     '#subtitle1' => '',
     '#subtitle2' => '',
-    '#candidate_action' => 'save',
+    '#candidate_action' => 'Save',
     '#text' => '',
   );
   $contests[] = array(
@@ -50,7 +50,7 @@ function voterguide_preprocess_page(&$variables) {
     '#image' => 'http://www.stevensegallery.com/300/200',
     '#subtitle1' => '',
     '#subtitle2' => '',
-    '#candidate_action' => 'favorite',
+    '#candidate_action' => 'Favorite',
     '#text' => '',
   );
   $contests[] = array(
@@ -61,7 +61,7 @@ function voterguide_preprocess_page(&$variables) {
     '#image' => 'http://www.placecage.com/300/200',
     '#subtitle1' => '',
     '#subtitle2' => '',
-    '#candidate_action' => 'favorite',
+    '#candidate_action' => 'Favorite',
     '#text' => '',
   );
 
@@ -71,7 +71,7 @@ function voterguide_preprocess_page(&$variables) {
     '#header' => 'Proposition 101',
     '#body' => 'Shall Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     '#more_link' => '#!',
-    '#candidate_action' => 'favorite',
+    '#candidate_action' => 'Favorite',
   );
 
   $index = array();

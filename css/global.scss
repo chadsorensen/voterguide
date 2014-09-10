@@ -116,6 +116,57 @@ $mobile: 550px;
   font-size: 30px;
 }
 
+.header-4 {
+  font-weight: $medium;
+  font-size: 20px;
+}
+
+.header-5 {
+  font-weight: $bold;
+  font-size: 16px;
+}
+
+.body-1 {
+  font-weight: $regular;
+  font-size: 18px;
+}
+
+.body-1-light {
+  font-weight: $light;
+  font-size: 18px;
+}
+
+.body-2 {
+  font-weight: $regular;
+  font-size: 15px;
+}
+
+.body-3 {
+  font-weight: $light;
+  font-size: 14px;
+}
+
+.medium-1 {
+  font-weight: $medium;
+  font-size: 16px;
+}
+
+.large-button {
+  display: block;
+  @include size(300px 50px);
+  background: #474747;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 3px;
+  font-weight: $medium;
+  font-size: 18px;
+  text-align: center;
+  line-height: 50px;
+  &:hover {
+    background: $green;
+  }
+}
+
 // ==========================================================================
 // ★ GENERAL
 // ==========================================================================
@@ -130,6 +181,11 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   overflow: hidden;
+}
+
+.large-wrap {
+  @extend .inner-wrap;
+  max-width: 1200px;
 }
 
 // ==========================================================================
@@ -422,13 +478,6 @@ input {
   }
 }
 
-.promo,
-.promo img {
-  display: block;
-  width: 100%;
-  max-width: 1000px;
-}
-
 // ==========================================================================
 // ★ CONTEST LIST
 // ==========================================================================
@@ -439,62 +488,235 @@ input {
     color: #fff;
   }
   h3 {
+    padding-left: 10px;
     font-weight: $medium;
     font-size: 20px;
   }
 }
 
-.candidates-container {
-  padding-top: 60px;
+.content-block {
+  padding: 60px 0;
   background: #f9f9f9;
   overflow: hidden;
+  color: #555;
   h2 {
     display: block;
     float: left;
-    padding-top: 10px;
+    padding: 10px 0 0 10px;
   }
-  .list-view-container {
+  .list-view-controls {
     display: block;
     float: right;
+    padding-right: 10px;
     button {
+      position: relative;
       margin-right: 10px;
+      @include size(50px);
+      background: none;
+      color: #dcddde;
+
+      &:hover,
+      &.active {
+        color: #c5c6c8;
+      }
+      &:before {
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        font-size: 54px;
+      }
     }
   }
 }
 
 .list-container {
-
+  width: 100%;
+  padding-top: 40px;
 }
 
 .list-item {
   display: block;
   float: left;
-  margin-top: 40px;
+  margin-bottom: 15px;
   background: #fff;
-  box-shadow:         0px 1px 1px 0px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.11);
   border-radius: 2px;
   @include box-sizing(border-box);
+  h4 {
+
+  }
+  p {
+
+  }
+  .more-info {
+    position: relative;
+    display: block;
+    float: right;
+    @include size(45px);
+    margin-top: -26px;
+    color: #dcddde;
+    &:before {
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      font-size: 51px;
+    }
+    &:hover {
+      color: $green;
+    }
+  }
+  .candidate-action {
+    display: inline-block;
+    color: #aeaeae;
+    &:hover,
+    .active {
+      color: $green;
+    }
+  }
+  .i-star:before {
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+    font-size: 18px;
+  }
 }
 
-.grid-view {
-  width: 23.23176%;
+.list-content {
+  padding: 25px 30px;
+  @extend .body-2;
+  text-transform: capitalize;
+  h4 {
+    margin-bottom: 10px;
+  }
+  p {
+    display: inline-block;
+    &:after {
+      @include before(1px, 14px, inline-block, relative);
+      background: #555;
+      margin: 0 5px 0 7px;
+      top: 2px;
+    }
+  }
+}
+
+.gallery-view {
   max-width: 290px;
-  margin-right: 2.35765%;
-  margin-bottom: 10px;
+  margin-right: 10px;
   &:nth-of-type(4n) {
     margin-right: 0;
   }
 }
 
 .list-view {
-  width: 45%;
+  width: 47.5%;
   max-width: 580px;
   margin-right: 5%;
-  margin-bottom: 50px;
-  &:nth-of-type(2n+1) {
+  &:nth-of-type(2n) {
     margin-right: 0;
   }
   img {
     display: none;
   }
+}
+
+// ==========================================================================
+// ★ PROPOSITION
+// ========================================================================== 
+.proposition {
+  .left {
+    width: 100%;
+    max-width: 50%;
+    float: left;
+    padding: 0 75px 0 10px;
+
+    h2 {
+      padding: 0;
+      float: none;
+    }
+    p {
+      padding: 50px 0 40px;
+      line-height: 1.9;
+    }
+  }
+  .right {
+    width: 100%;
+    max-width: 50%;
+    .list-item {
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+    span {
+      position: relative;
+      display: block;
+      @include size(290px 232px);
+      color: #8f989c;
+      background: #dcddde;
+      text-align: center;
+      &:before {
+        position: relative;
+        top: 17px;
+        font-size: 205px;
+      }
+    }
+    h4 {
+      display: block;
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.proposition {
+  background: #f9f9f9;
+}
+
+// ==========================================================================
+// ★ YOUR BALLOT
+// ========================================================================== 
+.your-ballot {
+  background: url(../images/your-ballot-background.jpg) no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 40px 0;
+  .large-wrap {
+    padding: 0 10px;
+  }
+  .left {
+    max-width: 800px;
+    width: 100%;
+    float: left;
+  }
+  .right {
+    max-width: 345px;
+    width: 100%;
+    float: right;
+    h2 {
+      text-transform: capitalize;
+    }
+    p {
+      position: relative;
+      width: 260px;
+      padding: 20px 20px 20px 90px;
+      &:before {
+        position: absolute;
+        left: -3px;
+        margin-top: -2px;
+        font-size: 80px;
+        color: $green;
+      }
+    }
+    .large-button {
+      width: 100%;
+    }
+  }
+  h2 {
+    float: none;
+    padding: 0 0 30px;
+  }
+  p {
+
+  }
+
 }

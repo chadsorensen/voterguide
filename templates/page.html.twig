@@ -29,7 +29,7 @@
 #}
 <div id="page-wrapper"><div id="page">
 
-  <header id="header" class="{{ secondary_menu ? 'with-secondary-menu' : 'without-secondary-menu' }}" role="banner" aria-label="{{ 'Site header'|t}}"><div class="section">
+  <header id="header" class="{{ secondary_menu ? 'with-secondary-menu' : 'without-secondary-menu' }} full-width" role="banner" aria-label="{{ 'Site header'|t}}"><div class="section">
 {#     {% if logo %}
       <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" id="logo">
         <img src="{{ logo }}" alt="{{ 'Home'|t }}" />
@@ -98,7 +98,7 @@
       {{ page.index }}
 
       {{ page.contests }}
-      <h1>prop</h1>
+
       {{ page.proposition }}
       <h1>settings</h1>
       {{ page.settings }}

@@ -56,10 +56,10 @@
   }
 }
 
-.i-left-arrow:before {
+.i-gallery-view:before {
   content: "a";
 }
-.i-youtube:before {
+.i-left-arrow:before {
   content: "b";
 }
 .i-cog:before {
@@ -80,7 +80,7 @@
 .i-lock:before {
   content: "h";
 }
-.i-pin:before {
+.i-location-pin:before {
   content: "i";
 }
 .i-linkedin:before {
@@ -118,4 +118,10 @@
 }
 .i-link:before {
   content: "u";
+}
+.i-list-view:before {
+  content: "v";
+}
+.i-youtube:before {
+  content: "w";
 }

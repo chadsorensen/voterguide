@@ -1,7 +1,9 @@
-<div class="contest list-item grid-view">
+<div class="contest list-item list-view">
   <img src="{{ image }}" alt="" width="300" height="200">
-  <h4>{{ name }}</h4>
-  <p>{{ party }}</p>
-  <a class="candidate-action active" href="#!" title="candidate-action">{{ candidate_action }}</a>
-  <a href="#!info" title="more information">more information</a>
+  <div class="list-content">  
+    <h4 class="header-5">{{ name }}</h4>
+    <p class="body-3">{{ party }}</p>
+    <a class="candidate-action active i-star body-3" href="#!" title="candidate-action">{{ candidate_action }}</a>
+    <a href="#!info" class="more-info i-info ir" title="more information"></a>
+  </div>
 </div>

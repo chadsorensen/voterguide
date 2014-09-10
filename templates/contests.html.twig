@@ -1,14 +1,30 @@
+<div class="your-ballot content-block">
+  <div class="large-wrap">  
+    <div class="left">
+      <h2 class="header-2">Your Ballot</h2>
+      <p class="body-1-light">Your ballot below contains all contests and measures that will appear on your actual ballot this election. Click on the information icon for each candidate to learn more.  Save a candidate or measure by clicking on the star to save to your list of favorites then download a reference sheet of your favorite candidates for easy review when voting.</p>
+    </div>
+    <div class="right">
+      <div class="">
+        <h4 class="header-4">Sign Up And Save Your Favorites</h4>
+        <p class="body-1-light i-star">Create an account to easily save all of your activity to your list of favorites.</p>
+        <a href="#!info" class="large-button" title="Find Out More">Create an account</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="contests">
   <header>
-    <h3 class="inner-wrap">2014 Canidates &amp; Contests</h3>
+    <h3 class="large-wrap header-4">2014 Canidates &amp; Contests</h3>
   </header>
-  <section class="candidates-container">
-    <div class="inner-wrap">
+  <section class="candidates-container content-block">
+    <div class="large-wrap">
 
       <h2 class="header-2">U.S. President</h2>
       <div class="list-view-controls">
-        <button class="list" type="button">list</button>
-        <button class="full" type="button">full</button>
+        <button class="list i-list-view ir" type="button"></button>
+        <button class="gallery i-gallery-view ir active" type="button"></button>
       </div>
       <div class="list-container clearfix">
       {% for contest in contests %}
