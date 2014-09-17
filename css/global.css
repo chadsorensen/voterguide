@@ -711,7 +711,9 @@ input {
   background: url(../images/your-ballot-background.jpg) no-repeat;
   background-size: cover;
   color: #fff;
-  padding: 60px 0; }
+  padding: 40px 0; }
+.account .tagline {
+  padding-top: 60px; }
 .account .large-button {
   margin-top: 20px;
   background: #66696c; }
