@@ -45,6 +45,21 @@ a {
   font-weight: normal;
   color: $green;
 }
+
+input:focus {
+  outline: none;
+}
+
+.input-holder {
+  border: 1px transparent;
+  &:focus {
+    border: 1px solid $green;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(20, 185, 214, 0.45);
+    -moz-box-shadow:    0px 0px 10px 0px rgba(20, 185, 214, 0.45);
+    box-shadow:         0px 0px 10px 0px rgba(20, 185, 214, 0.45);
+    outline: none;
+  }
+}
 // ==========================================================================
 // ★ CUSTOM MIXINS
 // ==========================================================================
@@ -99,6 +114,16 @@ $mobile: 550px;
 
 .clearfix {
   @include clearfix;
+}
+
+.left {
+  display: block;
+  float: left;
+}
+
+.right {
+  display: block;
+  float: right;
 }
 
 .header-1 {
@@ -174,6 +199,11 @@ html,
 body {
   font-family: 'Ubuntu', sans-serif !important;
   @include antialias;
+}
+
+#main-wrapper,
+#main {
+  width: 100%;
 }
 
 .inner-wrap {
@@ -673,6 +703,50 @@ input {
 }
 
 // ==========================================================================
+// ★ ELECTION FORM
+// ========================================================================== 
+.election-form {
+  width: 100%;
+  padding: 35px 0;
+  background: #474747;
+  color: #fff;
+  overflow: hidden;
+  h2 {
+    margin-bottom: 10px;
+    font-family: $regular;
+    font-size: 30px;
+  }
+
+  .left {
+    max-width: 700px;
+    width: 60%;
+  }
+
+  .right {
+    max-width: 410px;
+    width: 40%;
+  }
+
+  form {
+    position: relative;
+    input[type="email"] {
+      display: block;
+      float: left;
+      padding: 15px 20px;
+      border-radius: 2px 0 0 2px;
+    }
+    input[type="submit"] {
+      display: block;
+      float: left;
+      padding: 15px 20px;
+      background: $green;
+      color: #fff;
+      text-transform: uppercase;
+      border-radius: 0 2px 2px 0;
+    }
+  }
+}
+// ==========================================================================
 // ★ YOUR BALLOT
 // ========================================================================== 
 .your-ballot {
@@ -719,4 +793,121 @@ input {
 
   }
 
+}
+
+// ==========================================================================
+// ★ ACCOUNT
+// ========================================================================== 
+
+.account {
+
+  header {
+    background: url(../images/your-ballot-background.jpg) no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 60px 0;    
+  }
+
+  .large-button {
+    margin-top: 20px;
+    background: #66696c;
+  }
+}
+
+.account-item {
+  display: block;
+  width: 45%;
+  max-width: 500px;
+  float: left;
+  margin: 50px 100px 0 0;
+  overflow: visible;
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+  h2 {
+    display: block;
+    float: left;
+    padding-bottom: 25px;
+  }
+  .sub-link {
+    position: relative;
+    top: 10px;
+    display: block;
+    float: right;
+    color: #555;
+    padding-right: 30px;
+    &:before {
+      position: absolute;
+      top: -2px;
+      right: 0;
+      color: $green;
+      font-size: 20px;
+    }
+  }
+  .input-holder {
+    @include clearfix;
+    width: 100%;
+    height: 45px;
+    background: #fcfcfc;
+    padding: 0px 30px;
+    overflow: hidden;
+    @include box-sizing(border-box);
+    &.active {
+      background: #ededed;
+    }
+  }
+  label {
+    display: block;
+    float: left;
+    width: 110px;
+    padding: 15px 0;
+    color: #a6a9ad;
+    @extend .medium-1;
+    @include box-sizing(border-box);
+  }
+  input {
+    display: block;
+    float: right;
+    width: 280px;
+    padding: 15px 12px;
+    color: #555;
+    background: transparent;
+    @extend .medium-1;
+    @include box-sizing(border-box);
+
+  }
+}
+
+// ==========================================================================
+// ★ FOOTER
+// ========================================================================== 
+
+#footer {
+  width: 100%;
+  background: #363636;
+  padding: 30px 0;
+}
+
+.footer-logo {
+  display: block;
+  @include size(210px 18px);
+  background: url(../images/footer-logo.png) no-repeat;
+}
+
+.copyright {
+  color: #868686;
+  text-decoration: italic;
+}
+
+.support {
+  position: relative;
+  padding-right: 60px;
+  display: block;
+  float: right;
+  &:after {
+    @include before(42px, 29px, absolute);
+    top: -14px;
+    right: 0;
+    background: url(../images/support-logo.png) no-repeat;
+  }
 }

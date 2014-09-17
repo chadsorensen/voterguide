@@ -1,29 +1,59 @@
 <div class="account">
   <div class="full-width">
-    <div class="header inner-wrap">
-      <h2>hi {{ name }}</h2>
-      <a href="#!" title="Your Account">Your Account</a>
-    </div>
+    <header>    
+      <div class="inner-wrap">
+        <h2 class="header-2">Hi {{ name }}!</h2>
+        <p class="body-1-light">Your Account</p>
+      </div>
+    </header>
+  </div>
+
+  <div class="inner-wrap">
     <div class="tagline">
-      <p>Your ballot below contains all contests and measures that will appear on your actual ballot this election. Click on the information icon for each candidate to learn more.  Save a candidate or measure by clicking on the star to save to your list of favorites then download a reference sheet of your favorite candidates for easy review when voting.</p>
-      <a href="#!" class="button" title="view your ballot">view your ballot</a>
+      <p class="body-1-light">Your ballot below contains all contests and measures that will appear on your actual ballot this election. Click on the information icon for each candidate to learn more.  Save a candidate or measure by clicking on the star to save to your list of favorites then download a reference sheet of your favorite candidates for easy review when voting.</p>
+      <a href="#!" class="large-button" title="view your ballot">view your ballot</a>
     </div>
-    <div class="account-item">
-      <h2>Settings</h2>
-      <a href="#!" class="sub-link edit" title="edit">Edit</a>
-      <input type="text" name="name" value="name" placeholder="name">
-      <input type="email" name="" value="" placeholder="Email Address">
-      <input type="password" name="" value="" placeholder="Password">
-    </div>
-    <div class="account-item">
-      <h2>Location</h2>
-      <a href="#!" class="sub-link edit" title="edit">Edit</a>
-      <input type="text" name="address" value="address" placeholder="address">
-    </div>
-    <div class="account-item">
-      <h2>Facebook</h2>
-      <a href="#!" class="sub-link edit" title="edit">Edit</a>
-      <input type="text" name="off" value="off" placeholder="off">
+
+    <div class="account-item-wrap">
+
+      <div class="account-item">
+        <h2 class="header-2">Settings</h2>
+        <a href="#!" class="sub-link edit body-3 i-cog" title="edit">Edit</a>
+      
+        <div class="input-holder">
+          <label for="name">Name:</label>
+          <input type="text" name="name" value="name" placeholder="">
+        </div>
+      
+        <div class="input-holder">
+          <label for="email">Email:</label>
+          <input type="email" name="" value="" placeholder="">
+        </div>
+      
+        <div class="input-holder">
+          <label for="password">Password:</label>
+          <input type="password" name="" value="" placeholder="">
+        </div>
+      </div>
+      
+      <div class="account-item">
+        <h2 class="header-2">Location</h2>
+        <a href="#!" class="sub-link edit body-3 i-cog" title="edit">Edit</a>
+        <div class="input-holder">
+          <label for="address">Address:</label>
+          <input type="text" name="address" value="address" placeholder="">
+        </div>
+      </div>
+
+      <div class="account-item">
+        <h2 class="header-2">Facebook</h2>
+        <a href="#!" class="sub-link edit body-3 i-cog" title="edit">Edit</a>
+        <div class="input-holder">
+          <label for="link status">Link Status:</label>
+          <input type="text" name="off" value="off" placeholder="off">
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

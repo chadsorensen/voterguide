@@ -100,13 +100,28 @@
       {{ page.contests }}
 
       {{ page.proposition }}
-      <h1>settings</h1>
+
       {{ page.settings }}
 
       {{ feed_icons }}
     </section></main> <!-- /.section, /#content -->
 
   </div></div><!-- /#main, /#main-wrapper -->
+
+{# this needs to get moved into the ballot page #}
+
+  <div class="election-form">
+    <div class="large-wrap">
+      <div class="left">
+        <h2>Election Night Results!</h2>
+        <p class="body-2">Fill out the following information and we will send you a reminder when election results are posted.</p>
+      </div>
+      <form class="right" action="email">
+        <input class="medium-1" type="email" name="email" placeholder="Email Address">
+        <input class="medium-1" type="submit" value="submit">
+      </form>
+    </div>
+  </div>
 
   <div id="footer-wrapper"><footer class="section">
     {% if page.footer %}
