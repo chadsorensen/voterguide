@@ -807,14 +807,10 @@ input {
   padding-right: 60px;
   display: block;
   float: right; }
-  .support:after {
-    content: "";
-    display: absolute;
+  .support:before {
     position: absolute;
-    height: 29px;
-    width: 42px;
-    top: -14px;
     right: 0;
-    background: url(../images/support-logo.png) no-repeat; }
+    top: -20px;
+    font-size: 44px; }
 
 /*# sourceMappingURL=global.css.map */

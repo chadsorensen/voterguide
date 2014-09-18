@@ -917,10 +917,10 @@ input {
   padding-right: 60px;
   display: block;
   float: right;
-  &:after {
-    @include before(42px, 29px, absolute);
-    top: -14px;
+  &:before {
+    position: absolute;
     right: 0;
-    background: url(../images/support-logo.png) no-repeat;
+    top: -20px;
+    font-size: 44px;
   }
 }
