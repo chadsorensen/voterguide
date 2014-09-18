@@ -146,6 +146,11 @@ $mobile: 550px;
   font-size: 20px;
 }
 
+.header-4-light {
+  font-weight: $light;
+  font-size: 22px;
+}
+
 .header-5 {
   font-weight: $bold;
   font-size: 16px;
@@ -800,7 +805,7 @@ input {
 // ========================================================================== 
 
 .account {
-
+  padding-bottom: 150px;
   header {
     background: url(../images/your-ballot-background.jpg) no-repeat;
     background-size: cover;
@@ -810,10 +815,14 @@ input {
 
   .tagline {
     padding-top: 60px;
+    color: #555;
+    p {
+      line-height: 1.8;
+    }
   }
 
   .large-button {
-    margin-top: 20px;
+    margin: 20px 0 40px;
     background: #66696c;
   }
 }

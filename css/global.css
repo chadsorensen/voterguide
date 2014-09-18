@@ -191,6 +191,10 @@ input:focus {
   font-weight: 500;
   font-size: 20px; }
 
+.header-4-light {
+  font-weight: 300;
+  font-size: 22px; }
+
 .header-5 {
   font-weight: 700;
   font-size: 16px; }
@@ -707,16 +711,21 @@ input {
     float: none;
     padding: 0 0 30px; }
 
-.account header {
-  background: url(../images/your-ballot-background.jpg) no-repeat;
-  background-size: cover;
-  color: #fff;
-  padding: 40px 0; }
-.account .tagline {
-  padding-top: 60px; }
-.account .large-button {
-  margin-top: 20px;
-  background: #66696c; }
+.account {
+  padding-bottom: 150px; }
+  .account header {
+    background: url(../images/your-ballot-background.jpg) no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 40px 0; }
+  .account .tagline {
+    padding-top: 60px;
+    color: #555; }
+    .account .tagline p {
+      line-height: 1.8; }
+  .account .large-button {
+    margin: 20px 0 40px;
+    background: #66696c; }
 
 .account-item {
   display: block;

@@ -77,6 +77,11 @@ function voterguide_preprocess_page(&$variables) {
   $index = array();
   $index[] = array(
     '#theme' => 'index',
+  );  
+
+  $candidate = array();
+  $candidate[] = array(
+    '#theme' => 'candidate',
   );
 
   $settings = array();
@@ -112,6 +117,10 @@ function voterguide_preprocess_page(&$variables) {
   $variables['page']['settings'] = array(
     '#theme' => 'settings',
     '#settings' => $settings,
+  );
+  $variables['page']['candidate'] = array(
+    '#theme' => 'candidate',
+    '#candidate' => $candidate,
   );
   $variables['page']['footer'] = array(
     '#theme' => 'footer',
@@ -185,6 +194,11 @@ function voterguide_theme() {
         'facebook' => NULL,
       ),
       'template' => 'settings',
+    ),
+    'candidate' => array(
+      'variables' => array(
+      ),
+      'template' => 'candidate',
     ),
     'footer' => array(
       'variables' => array(
