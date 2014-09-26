@@ -23,10 +23,10 @@
 
       <h2 class="header-2">U.S. President</h2>
       <div class="list-view-controls">
-        <button class="list i-list-view ir" type="button"></button>
-        <button class="gallery i-gallery-view ir active" type="button"></button>
+        <button class="list i-list-view ir" data-toggle="list" type="button"></button>
+        <button class="gallery i-gallery-view ir active" data-toggle="list" type="button"></button>
       </div>
-      <div class="list-container clearfix">
+      <div class="list-container list-view clearfix">
       {% for contest in contests %}
         {{ contest }}
       {% endfor %}

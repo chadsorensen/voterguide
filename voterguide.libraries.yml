@@ -1,12 +1,16 @@
 base:
   version: VERSION
+  js:
+    js/application.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
   css:
     theme:
       css/global.css: {}
       css/layout.css: {}
       css/icons.css: {}
       css/print.css: { media: print }
-  js:
-    js/application.js: {}
-  dependencies:
-    - core/jquery

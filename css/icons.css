@@ -36,10 +36,10 @@
   overflow: hidden;
   -webkit-border-radius: 3px;
   font-size: 32px; }
-  .icon.centered:before {
-    display: block;
-    text-align: center;
-    line-height: 2; }
+.icon.centered:before {
+  display: block;
+  text-align: center;
+  line-height: 2; }
 
 .i-gallery-view:before {
   content: "a"; }
