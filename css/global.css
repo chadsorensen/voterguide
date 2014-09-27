@@ -201,7 +201,7 @@ input:focus {
   font-weight: 700;
   font-size: 16px; }
 
-.body-1 {
+.body-1, .candidate .biography h5 {
   font-weight: 400;
   font-size: 18px; }
 
@@ -694,6 +694,8 @@ input {
     display: none; }
     .candidate .content-container.active {
       display: block; }
+    .candidate .content-container h4 {
+      margin-bottom: 25px; }
   .candidate .notes {
     background: #fff;
     padding: 55px 0 80px; }
@@ -709,6 +711,49 @@ input {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; }
+  .candidate .col-2 {
+    width: 48%;
+    margin-right: 2%;
+    float: left; }
+    .candidate .col-2:last-child {
+      margin-right: 0; }
+  .candidate .statement p {
+    margin-bottom: 40px;
+    line-height: 1.8; }
+  .candidate .biography {
+    background: #f9f9f9; }
+    .candidate .biography h5 {
+      padding: 15px;
+      background: #f0f0f0; }
+    .candidate .biography .content-wrapper {
+      padding: 15px 20px; }
+    .candidate .biography p {
+      color: #5bb7a2; }
+    .candidate .biography ul {
+      list-style: none; }
+    .candidate .biography li {
+      position: relative;
+      color: #8c8c8c;
+      line-height: 2; }
+      .candidate .biography li:before {
+        content: '\25b6';
+        display: block;
+        color: #5bb7a2;
+        position: absolute;
+        left: 0; }
+  .candidate .video-container {
+    background: #fff; }
+    .candidate .video-container a {
+      display: block;
+      width: 165px;
+      float: left;
+      margin: 0 10px 25px 0; }
+    .candidate .video-container img {
+      display: block;
+      margin-bottom: 5px; }
+    .candidate .video-container p {
+      color: #000;
+      font-size: 12px; }
 
 .proposition .left {
   width: 100%;

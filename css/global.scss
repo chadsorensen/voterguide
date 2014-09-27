@@ -776,6 +776,9 @@ input {
     &.active {
       display: block;
     }
+    h4 {
+      margin-bottom: 25px;
+    }
   }
 
   .notes {
@@ -792,6 +795,72 @@ input {
       font-weight: $light;
       resize: none;
       @include box-sizing(border-box);
+    }
+  }
+  .col-2 {
+    width: 48%;
+    margin-right: 2%;
+    float: left;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+//Statement
+  .statement {
+    p {
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+  }
+
+//Biography
+  .biography {
+    background: #f9f9f9;
+    .column {
+    }
+    h5 {
+      padding: 15px;
+      background: #f0f0f0;
+      @extend .body-1;
+    }
+    .content-wrapper {
+      padding: 15px 20px;
+    }
+    p {
+      color: $green;
+    }
+    ul {
+      list-style: none;
+    }
+    li {
+      position: relative;
+      color: #8c8c8c;
+      line-height: 2;
+      &:before {
+        content: '\25b6';
+        display: block;
+        color: $green;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+//Videos
+  .video-container {
+    background: #fff;
+    a {
+      display: block;
+      width: 165px;
+      float: left;
+      margin: 0 10px 25px 0;
+    }
+    img {
+      display: block;
+      margin-bottom: 5px;
+    }
+    p {
+      color: #000;
+      font-size: 12px;
     }
   }
 }
