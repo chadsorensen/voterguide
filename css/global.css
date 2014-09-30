@@ -143,9 +143,9 @@ button:focus,
 input:focus {
   outline: none; }
 
-.input-holder {
+.input-holder, .login .forms-wrapper .account-sidebar.signup-form input {
   border: 1px transparent; }
-  .input-holder:focus {
+  .input-holder:focus, .login .forms-wrapper .account-sidebar.signup-form input:focus {
     border: 1px solid #5bb7a2;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(20, 185, 214, 0.45);
     -moz-box-shadow: 0px 0px 10px 0px rgba(20, 185, 214, 0.45);
@@ -205,7 +205,11 @@ input:focus {
   font-weight: 400;
   font-size: 18px; }
 
-.body-1-light {
+.body-1-medium {
+  font-weight: 500;
+  font-size: 18px; }
+
+.body-1-light, .candidate .contributors .graph-key p {
   font-weight: 300;
   font-size: 18px; }
 
@@ -225,6 +229,7 @@ input:focus {
   display: block;
   height: 50px;
   width: 300px;
+  max-width: 100%;
   background: #474747;
   color: #fff;
   text-transform: uppercase;
@@ -235,6 +240,17 @@ input:focus {
   line-height: 50px; }
   .large-button:hover {
     background: #5bb7a2; }
+  .large-button.fb {
+    background: #507cbe; }
+    .large-button.fb:hover {
+      background: #4971ae; }
+
+.col-2 {
+  width: 48%;
+  margin-right: 2%;
+  float: left; }
+  .col-2:last-child {
+    margin-right: 0; }
 
 html,
 body {
@@ -314,40 +330,40 @@ body {
   #main-links .account-link, .candidate .social .account-link {
     border-right: 1px solid #dcdddd; }
 
-#home {
+#home, .login .forms-wrapper {
   width: 100%;
   padding: 100px 0;
   background: url(../images/home-background.jpg) no-repeat;
   background-size: cover; }
-  #home h2 {
+  #home h2, .login .forms-wrapper h2 {
     margin: 0 0 30px 0;
     color: #555;
     font-size: 56px;
     font-weight: 300;
     text-align: center; }
-  #home form {
+  #home form, .login .forms-wrapper form {
     position: relative;
     background: #fff;
     border-radius: 3px;
     overflow: hidden; }
-  #home .inline label {
+  #home .inline label, .login .forms-wrapper .inline label {
     height: 65px;
     width: 65px;
     float: left;
     display: block;
     background: #5bb7a2;
     border-radius: 3px 0 0 3px; }
-  #home .inline input[type=text] {
+  #home .inline input[type=text], .login .forms-wrapper .inline input[type=text] {
     display: block;
     float: left;
     padding-left: 25px; }
-    #home .inline input[type=text].address {
+    #home .inline input[type=text].address, .login .forms-wrapper .inline input[type=text].address {
       width: 310px; }
-    #home .inline input[type=text].city {
+    #home .inline input[type=text].city, .login .forms-wrapper .inline input[type=text].city {
       width: 265px; }
-    #home .inline input[type=text].zipcode {
+    #home .inline input[type=text].zipcode, .login .forms-wrapper .inline input[type=text].zipcode {
       width: 210px; }
-  #home .divider {
+  #home .divider, .login .forms-wrapper .divider {
     position: relative;
     top: 9px;
     display: block;
@@ -355,7 +371,7 @@ body {
     height: 49px;
     width: 1px;
     background: #bec0c2; }
-  #home .submit {
+  #home .submit, .login .forms-wrapper .submit {
     display: block;
     float: left;
     width: 148px;
@@ -368,12 +384,12 @@ body {
     font-size: 18px;
     text-transform: uppercase;
     border-radius: 0 3px 3px 0; }
-  #home .find-your-ballot p {
+  #home .find-your-ballot p, .login .forms-wrapper .find-your-ballot p {
     padding: 25px 25px 80px;
     font-weight: 300;
     color: #555;
     text-align: center; }
-    #home .find-your-ballot p a {
+    #home .find-your-ballot p a, .login .forms-wrapper .find-your-ballot p a {
       color: #555; }
 
 .promo {
@@ -425,19 +441,19 @@ body {
     font-weight: 700; }
   .account-sidebar form {
     overflow: visible; }
-  .account-sidebar .input-holder {
+  .account-sidebar .input-holder, .login .forms-wrapper .account-sidebar.signup-form input {
     display: block;
     position: relative;
     margin-bottom: 10px;
     overflow: hidden; }
-    .account-sidebar .input-holder.focus {
+    .account-sidebar .input-holder.focus, .login .forms-wrapper .account-sidebar.signup-form input.focus {
       box-shadow: 0px 0px 5px #5bb7a2;
       outline: 0; }
-      .account-sidebar .input-holder.focus label {
+      .account-sidebar .input-holder.focus label, .login .forms-wrapper .account-sidebar.signup-form input.focus label {
         background: #5bb7a2; }
-      .account-sidebar .input-holder.focus input {
+      .account-sidebar .input-holder.focus input, .login .forms-wrapper .account-sidebar.signup-form input.focus input {
         border: 1px solid #5bb7a2; }
-    .account-sidebar .input-holder label {
+    .account-sidebar .input-holder label, .login .forms-wrapper .account-sidebar.signup-form input label {
       display: block;
       float: left;
       height: 50px;
@@ -668,7 +684,7 @@ input {
     .candidate nav a {
       position: relative;
       display: block;
-      padding: 25px 40px;
+      padding: 22px 40px;
       color: #5e676b;
       font-size: 19px;
       font-weight: 700;
@@ -711,12 +727,6 @@ input {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; }
-  .candidate .col-2 {
-    width: 48%;
-    margin-right: 2%;
-    float: left; }
-    .candidate .col-2:last-child {
-      margin-right: 0; }
   .candidate .statement p {
     margin-bottom: 40px;
     line-height: 1.8; }
@@ -738,22 +748,76 @@ input {
       .candidate .biography li:before {
         content: '\25b6';
         display: block;
-        color: #5bb7a2;
         position: absolute;
-        left: 0; }
+        left: -33px;
+        color: #5bb7a2;
+        font-size: 10px;
+        line-height: 3.25; }
   .candidate .video-container {
+    padding: 10px 0 0 10px;
     background: #fff; }
     .candidate .video-container a {
       display: block;
-      width: 165px;
+      width: 161px;
       float: left;
       margin: 0 10px 25px 0; }
     .candidate .video-container img {
       display: block;
+      width: 100%;
+      height: auto;
       margin-bottom: 5px; }
     .candidate .video-container p {
       color: #000;
       font-size: 12px; }
+  .candidate .contributors .column {
+    width: 505px;
+    max-width: 100%;
+    margin-right: 35px;
+    float: left; }
+    .candidate .contributors .column:last-child {
+      margin-right: 0; }
+    .candidate .contributors .column.financial-info {
+      width: 325px; }
+  .candidate .contributors ul {
+    padding: 0;
+    border: 1px solid #f1f1f1; }
+  .candidate .contributors li {
+    padding: 15px 20px;
+    background: #fcfcfc;
+    list-style-type: none; }
+    .candidate .contributors li:nth-child(even) {
+      background: #ededed; }
+  .candidate .contributors .amount {
+    float: right;
+    color: #5dbba5; }
+  .candidate .contributors .graph-key {
+    padding: 35px 25px 25px; }
+    .candidate .contributors .graph-key p {
+      position: relative;
+      display: block;
+      width: 50%;
+      float: left;
+      margin-bottom: 15px;
+      padding-left: 35px;
+      line-height: .8;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+      .candidate .contributors .graph-key p:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        display: block;
+        height: 18px;
+        width: 18px; }
+      .candidate .contributors .graph-key p.donations:before {
+        background: #5dbba5; }
+      .candidate .contributors .graph-key p.fundraising:before {
+        background: #729093; }
+      .candidate .contributors .graph-key p.personal:before {
+        background: #ffc600; }
+      .candidate .contributors .graph-key p.other:before {
+        background: #e76049; }
 
 .proposition .left {
   width: 100%;
@@ -898,7 +962,7 @@ input {
       right: 0;
       color: #5bb7a2;
       font-size: 20px; }
-  .account-item .input-holder {
+  .account-item .input-holder, .account-item .login .forms-wrapper .account-sidebar.signup-form input, .login .forms-wrapper .account-sidebar.signup-form .account-item input {
     content: "";
     display: table;
     clear: both;
@@ -910,7 +974,7 @@ input {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-    .account-item .input-holder.focus {
+    .account-item .input-holder.focus, .account-item .login .forms-wrapper .account-sidebar.signup-form input.focus, .login .forms-wrapper .account-sidebar.signup-form .account-item input.focus {
       background: #ededed; }
   .account-item label {
     display: block;
@@ -931,6 +995,69 @@ input {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
+
+.login .forms-wrapper .account-sidebar {
+  max-height: inherit; }
+  .login .forms-wrapper .account-sidebar.login-form {
+    float: left; }
+    .login .forms-wrapper .account-sidebar.login-form .large-button {
+      margin-top: 10px; }
+  .login .forms-wrapper .account-sidebar.signup-form {
+    width: 60%;
+    max-width: 675px;
+    text-align: center; }
+    .login .forms-wrapper .account-sidebar.signup-form h3 {
+      text-align: left; }
+    .login .forms-wrapper .account-sidebar.signup-form input {
+      margin: 0 10px 10px 0;
+      border: 1px solid #dcddde; }
+      .login .forms-wrapper .account-sidebar.signup-form input.full-width {
+        width: 100%;
+        max-width: 620px; }
+    .login .forms-wrapper .account-sidebar.signup-form .italic {
+      max-width: 300px;
+      margin: 0 auto; }
+  .login .forms-wrapper .account-sidebar .large-button {
+    float: none;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: regular;
+    color: #fff; }
+  .login .forms-wrapper .account-sidebar .medium-1, .login .forms-wrapper .account-sidebar .account-item label, .account-item .login .forms-wrapper .account-sidebar label, .login .forms-wrapper .account-sidebar .account-item input, .account-item .login .forms-wrapper .account-sidebar input {
+    position: relative;
+    margin: 25px 0;
+    padding: 0 30px;
+    color: #66696c; }
+    .login .forms-wrapper .account-sidebar .medium-1:before, .login .forms-wrapper .account-sidebar .account-item label:before, .account-item .login .forms-wrapper .account-sidebar label:before, .login .forms-wrapper .account-sidebar .account-item input:before, .account-item .login .forms-wrapper .account-sidebar input:before, .login .forms-wrapper .account-sidebar .medium-1:after, .login .forms-wrapper .account-sidebar .account-item label:after, .account-item .login .forms-wrapper .account-sidebar label:after, .login .forms-wrapper .account-sidebar .account-item input:after, .account-item .login .forms-wrapper .account-sidebar input:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      width: 45%;
+      height: 1px;
+      background: #d6d6d6; }
+    .login .forms-wrapper .account-sidebar .medium-1:after, .login .forms-wrapper .account-sidebar .account-item label:after, .account-item .login .forms-wrapper .account-sidebar label:after, .login .forms-wrapper .account-sidebar .account-item input:after, .account-item .login .forms-wrapper .account-sidebar input:after {
+      left: 55%; }
+  .login .forms-wrapper .account-sidebar .body-3 {
+    margin-top: 20px;
+    color: #555; }
+.login .footer-promo {
+  padding: 80px 0; }
+  .login .footer-promo.inner-wrap, .login .footer-promo.large-wrap {
+    overflow: visible; }
+  .login .footer-promo h2 {
+    position: relative;
+    margin-bottom: 35px;
+    color: #555; }
+    .login .footer-promo h2:before {
+      position: absolute;
+      top: -3px;
+      left: -65px;
+      color: #66ccb5;
+      text-shadow: 1px 1px 0 #5ebca6,  -1px -1px 0 #5ebca6,  1px -1px 0 #5ebca6,  -1px 1px 0 #5ebca6,  1px 1px 0 #5ebca6; }
+  .login .footer-promo p {
+    color: #66696c; }
 
 #footer {
   width: 100%;

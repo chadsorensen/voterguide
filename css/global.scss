@@ -163,6 +163,11 @@ $mobile: 550px;
   font-size: 18px;
 }
 
+.body-1-medium {
+  font-weight: $medium;
+  font-size: 18px;
+}
+
 .body-1-light {
   font-weight: $light;
   font-size: 18px;
@@ -186,6 +191,7 @@ $mobile: 550px;
 .large-button {
   display: block;
   @include size(300px 50px);
+  max-width: 100%;
   background: #474747;
   color: #fff;
   text-transform: uppercase;
@@ -196,6 +202,24 @@ $mobile: 550px;
   line-height: 50px;
   &:hover {
     background: $green;
+  }
+  &.fb {
+    background: #507cbe;
+    &:hover {
+      background: #4971ae;
+
+    }
+  }
+}
+
+//Columns based on 4cols
+
+.col-2 {
+  width: 48%;
+  margin-right: 2%;
+  float: left;
+  &:last-child {
+    margin-right: 0;
   }
 }
 
@@ -742,7 +766,7 @@ input {
     a {
       position: relative;
       display: block;
-      padding: 25px 40px;
+      padding: 22px 40px;
       color: #5e676b;
       font-size: 19px;
       font-weight: $bold;
@@ -797,14 +821,7 @@ input {
       @include box-sizing(border-box);
     }
   }
-  .col-2 {
-    width: 48%;
-    margin-right: 2%;
-    float: left;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
+
 //Statement
   .statement {
     p {
@@ -839,28 +856,108 @@ input {
       &:before {
         content: '\25b6';
         display: block;
-        color: $green;
         position: absolute;
-        left: 0;
+        left: -33px;
+        color: $green;
+        font-size: 10px;
+        line-height: 3.25;
       }
     }
   }
 //Videos
   .video-container {
+    padding: 10px 0 0 10px;
     background: #fff;
     a {
       display: block;
-      width: 165px;
+      width: 161px;
       float: left;
       margin: 0 10px 25px 0;
     }
     img {
       display: block;
+      width: 100%;
+      height: auto;
       margin-bottom: 5px;
     }
     p {
       color: #000;
       font-size: 12px;
+    }
+  }
+
+//Contributors
+  .contributors {
+    .column {
+      width: 505px;
+      max-width: 100%;
+      margin-right: 35px;
+      float: left;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.financial-info {
+        width: 325px;
+      }
+    }
+    ul {
+      padding: 0;
+      border: 1px solid #f1f1f1;
+    }
+
+    li {
+      padding: 15px 20px;
+      background: #fcfcfc;
+      list-style-type: none;
+      &:nth-child(even) {
+        background: #ededed;
+      }
+    }
+    .amount {
+      float: right;
+      color: #5dbba5;
+    }
+    .graph-key {
+      padding: 35px 25px 25px;
+      p {
+        position: relative;
+        display: block;
+        width: 50%;
+        float: left;
+        margin-bottom: 15px;
+        padding-left: 35px;
+        @extend .body-1-light;
+        line-height: .8;
+        @include box-sizing(border-box);
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          display: block;
+          @include size(18px)
+        }
+        &.donations {
+          &:before {
+            background: #5dbba5;
+          }
+        }
+        &.fundraising {
+          &:before {
+            background: #729093;
+          }
+        }
+        &.personal {
+          &:before {
+            background: #ffc600;
+          }
+        }
+        &.other {
+          &:before {
+            background: #e76049;
+          }
+        }
+      }
     }
   }
 }
@@ -1101,6 +1198,102 @@ input {
   }
 }
 
+
+// ==========================================================================
+// ★ LOGIN/SIGNUP
+// ========================================================================== 
+.login {
+  .forms-wrapper {
+    @extend #home;
+    .account-sidebar {
+      max-height: inherit;
+      &.login-form {
+        float: left;
+        .large-button {
+          margin-top: 10px;
+        }
+      }
+      &.signup-form {
+        width: 60%;
+        max-width: 675px;
+        text-align: center;
+        h3 {
+          text-align: left;
+        }
+        input {
+          margin: 0 10px 10px 0;
+          &.full-width {
+            width: 100%;
+            max-width: 620px;
+          } 
+          @extend .input-holder;
+          border: 1px solid #dcddde;
+        }
+        .italic {
+          max-width: 300px;
+          margin: 0 auto;
+        }
+      }
+      .large-button {
+        float: none;
+        margin: 0 auto;
+        font-size: 16px;
+        font-weight: regular;
+        color: #fff;
+      }
+      .medium-1 {
+        position: relative;
+        margin: 25px 0;
+        padding: 0 30px;
+        color: #66696c;
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          display: block;
+          width: 45%;
+          height: 1px;
+          background: #d6d6d6;
+        }
+        &:after {
+          left: 55%;
+        }
+      }
+      .body-3 {
+        margin-top: 20px;
+        color: #555;
+      }
+    }
+  }
+  .footer-promo {
+    padding: 80px 0;
+    &.inner-wrap {
+      overflow: visible;
+    }
+    h2 {
+      position: relative;
+      margin-bottom: 35px;
+      color: #555;
+      &:before {
+        position: absolute;
+        top: -3px;
+        left: -65px;
+        color: #66ccb5;
+        text-shadow: 
+          1px 1px 0 #5ebca6, 
+          -1px -1px 0 #5ebca6, 
+          1px -1px 0 #5ebca6, 
+          -1px 1px 0 #5ebca6, 
+          1px 1px 0 #5ebca6;
+      }
+    }
+    p {
+      color: #66696c;
+    }
+  }
+}
 // ==========================================================================
 // ★ FOOTER
 // ========================================================================== 

@@ -95,6 +95,11 @@ function voterguide_preprocess_page(&$variables) {
     '#link' => '#!view',
   );
 
+  $login = array();
+  $login[] = array(
+    '#theme' => 'login',
+  );
+
   $footer = array();
   $footer[] = array(
     '#theme' => 'footer',
@@ -121,6 +126,10 @@ function voterguide_preprocess_page(&$variables) {
   $variables['page']['candidate'] = array(
     '#theme' => 'candidate',
     '#candidate' => $candidate,
+  );
+  $variables['page']['login'] = array(
+    '#theme' => 'login',
+    '#login' => $login,
   );
   $variables['page']['footer'] = array(
     '#theme' => 'footer',
@@ -209,6 +218,11 @@ function voterguide_theme() {
       'variables' => array(
       ),
       'template' => 'candidate',
+    ),
+    'login' => array(
+      'variables' => array(
+      ),
+      'template' => 'login',
     ),
     'footer' => array(
       'variables' => array(
