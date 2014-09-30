@@ -1,0 +1,44 @@
+// ==========================================================================
+// ★ ELECTION FORM
+// ========================================================================== 
+.election-form {
+  width: 100%;
+  padding: 35px 0;
+  background: #474747;
+  color: #fff;
+  overflow: hidden;
+  h2 {
+    margin-bottom: 10px;
+    font-family: $regular;
+    font-size: 30px;
+  }
+
+  .left {
+    max-width: 700px;
+    width: 60%;
+  }
+
+  .right {
+    max-width: 410px;
+    width: 40%;
+  }
+
+  form {
+    position: relative;
+    input[type="email"] {
+      display: block;
+      float: left;
+      padding: 15px 20px;
+      border-radius: 2px 0 0 2px;
+    }
+    input[type="submit"] {
+      display: block;
+      float: left;
+      padding: 15px 20px;
+      background: $green;
+      color: #fff;
+      text-transform: uppercase;
+      border-radius: 0 2px 2px 0;
+    }
+  }
+}

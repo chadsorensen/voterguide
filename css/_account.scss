@@ -1,0 +1,90 @@
+// ==========================================================================
+// ★ ACCOUNT
+// ========================================================================== 
+
+.account {
+  padding-bottom: 150px;
+  header {
+    background: url(../images/your-ballot-background.jpg) no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 40px 0;    
+  }
+
+  .tagline {
+    padding-top: 60px;
+    color: #555;
+    p {
+      line-height: 1.8;
+    }
+  }
+
+  .large-button {
+    margin: 20px 0 40px;
+    background: #66696c;
+  }
+}
+
+.account-item {
+  display: block;
+  width: 45%;
+  max-width: 500px;
+  float: left;
+  margin: 50px 100px 0 0;
+  overflow: visible;
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+  h2 {
+    display: block;
+    float: left;
+    padding-bottom: 25px;
+  }
+  .sub-link {
+    position: relative;
+    top: 10px;
+    display: block;
+    float: right;
+    color: #555;
+    padding-right: 30px;
+    &:before {
+      position: absolute;
+      top: -2px;
+      right: 0;
+      color: $green;
+      font-size: 20px;
+    }
+  }
+  .input-holder {
+    @include clearfix;
+    width: 100%;
+    height: 45px;
+    background: #fcfcfc;
+    padding: 0px 30px;
+    overflow: hidden;
+    @include box-sizing(border-box);
+    &.focus {
+      background: #ededed;
+    }
+  }
+  label {
+    display: block;
+    float: left;
+    width: 110px;
+    padding: 15px 0;
+    color: #a6a9ad;
+    @extend .medium-1;
+    @include box-sizing(border-box);
+  }
+  input {
+    display: block;
+    float: right;
+    width: 280px;
+    padding: 15px 12px;
+    color: #555;
+    background: transparent;
+    @extend .medium-1;
+    @include box-sizing(border-box);
+
+  }
+}

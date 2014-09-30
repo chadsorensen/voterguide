@@ -1,0 +1,223 @@
+// ==========================================================================
+// ★ HOME PAGE
+// ==========================================================================
+#home {
+  width: 100%;
+  padding: 100px 0;
+  background: url(../images/home-background.jpg) no-repeat;
+  background-size: cover;
+  h2 {
+    margin: 0 0 30px 0;
+    color: #555;
+    font-size: 56px;
+    font-weight: $light;
+    text-align: center;
+  }
+  form {
+    position: relative;
+    background: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .inline label {
+    @include size(65px);
+    float: left;
+    display: block;
+    background: $green;
+    border-radius: 3px 0 0 3px;
+  }
+  .inline input[type=text] {
+    display: block;
+    float: left;
+    padding-left: 25px;
+    &.address {
+      width: 310px;
+    }
+    &.city {
+      width: 265px;
+
+    }
+    &.zipcode {
+      width: 210px;
+
+    }
+  }
+  .divider {
+    position: relative;
+    top: 9px;
+    display: block;
+    float: left;
+    @include size(1px 49px);
+    background: #bec0c2;
+  }
+  .submit {
+    display: block;
+    float: left;
+    width: 148px;
+    height: 65px;
+    background: $green;
+    padding-right: 40px;
+    padding-left: 40px;
+    color: #fff;
+    font-weight: $light;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 0 3px 3px 0;
+  }
+  .find-your-ballot p {
+    padding: 25px 25px 80px;
+    font-weight: $light;
+    color: #555;
+    text-align: center;
+    a {
+      color: #555;
+    }
+  }
+}
+
+.promo {
+  display: block;
+  float: left;
+  width: 60%;
+  max-width: 627px;
+  max-height: 300px;
+  padding: 30px 35px 40px;
+  @include linear-gradient(#373936, #3f434c, #464646);
+  color: #fff;
+  font-weight: $light;
+  font-size: 14px;
+  border-radius: 3px;
+  h3 {
+    font-weight: $light;
+    font-size: 40px;
+    span {
+      font-weight: $medium;
+    }
+  }
+  p {
+    padding: 25px 0;
+    line-height: 2;
+  }
+  .italic {
+    padding: 5px 0;
+
+  }
+}
+
+.account-sidebar {
+  display: block;
+  float: right;
+  width: 38%;
+  max-height: 300px;
+  max-width: 360px;
+  background: #fff;
+  padding: 35px 30px 30px 35px;
+  border-radius: 3px;
+  h3 {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #555;
+    font-weight: $light;
+    font-size: 40px;
+  }
+  a {
+    display: block;
+    float: right;
+    margin-top: 17px;
+    color: #555;
+    font-size: 14px;
+    font-weight: $bold;
+  }
+  form {
+    overflow: visible;
+  }
+  .input-holder {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+    &.focus {
+      box-shadow: 0px 0px 5px $green;
+      outline: 0;
+      label {
+        background: $green;
+      }
+      input {
+        border: 1px solid $green;
+      }
+    }
+    label {
+      display: block;
+      float: left;
+      @include size(50px);
+      display: block;
+      background: #dcddde;
+      border-radius: 3px 0 0 3px;
+    }
+  }
+  .icon {
+    font-size: 25px;
+  }
+  input {
+    display: block;
+    float: left;
+    max-width: 245px;
+    height: 50px;
+    color: #a6a9ad;
+    font-size: 16px;
+    font-weight: $light;
+    border: 1px solid #dcddde;
+    border-radius: 0 3px 3px 0;
+
+  }
+  input[type="submit"] {
+    display: block;
+    margin-top: 10px;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    background: $darkGray;
+    color: #fff;
+    font-weight: $regular;
+    text-transform: uppercase;
+    border-radius: 3px;
+  }
+}
+
+.banner {
+  padding-top: 20px;
+}
+
+.footer-tagline {
+  width: 100%;
+  background: url(../images/footer-tagline-background.jpg) no-repeat;
+  padding: 50px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: $light;
+  h4 {
+    text-transform: capitalize;
+  }
+}
+
+// Forms
+form {
+  display: block;
+}
+input {
+  margin: 0;
+  padding: 20px 12px;
+  border: none;
+  color: #a6a9ad;
+  font-weight: $light;
+  font-size: 20px;
+  &.icon {
+    position: relative;
+    padding-left: 65px;
+    &:before {
+      @include before(65px, 65px);
+      background: $green;
+    }
+  }
+}

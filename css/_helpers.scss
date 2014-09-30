@@ -1,0 +1,126 @@
+// ==========================================================================
+// ★ HELPERS
+// ==========================================================================
+.em {
+  font-weight: $medium;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.ir {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.left {
+  display: block;
+  float: left;
+}
+
+.right {
+  display: block;
+  float: right;
+}
+
+.header-1 {
+  font-weight: $light;
+  font-size: 56px;
+}
+
+.header-2 {
+  font-weight: $light;
+  font-size: 40px;
+}
+
+.header-3 {
+  font-weight: $light;
+  font-size: 30px;
+}
+
+.header-4 {
+  font-weight: $medium;
+  font-size: 20px;
+}
+
+.header-4-light {
+  font-weight: $light;
+  font-size: 22px;
+}
+
+.header-5 {
+  font-weight: $bold;
+  font-size: 16px;
+}
+
+.body-1 {
+  font-weight: $regular;
+  font-size: 18px;
+}
+
+.body-1-medium {
+  font-weight: $medium;
+  font-size: 18px;
+}
+
+.body-1-light {
+  font-weight: $light;
+  font-size: 18px;
+}
+
+.body-2 {
+  font-weight: $regular;
+  font-size: 15px;
+}
+
+.body-3 {
+  font-weight: $light;
+  font-size: 14px;
+}
+
+.medium-1 {
+  font-weight: $medium;
+  font-size: 16px;
+}
+
+.large-button {
+  display: block;
+  @include size(300px 50px);
+  max-width: 100%;
+  background: #474747;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 3px;
+  font-weight: $medium;
+  font-size: 18px;
+  text-align: center;
+  line-height: 50px;
+  &:hover {
+    background: $green;
+  }
+  &.fb {
+    background: #507cbe;
+    &:hover {
+      background: #4971ae;
+
+    }
+  }
+}
+
+//Columns based on 4cols
+
+.col-2 {
+  width: 48%;
+  margin-right: 2%;
+  float: left;
+  &:last-child {
+    margin-right: 0;
+  }
+}

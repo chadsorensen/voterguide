@@ -1,0 +1,33 @@
+// ==========================================================================
+// ★ FOOTER
+// ========================================================================== 
+
+#footer {
+  width: 100%;
+  background: #363636;
+  padding: 30px 0;
+}
+
+.footer-logo {
+  display: block;
+  @include size(210px 18px);
+  background: url(../images/footer-logo.png) no-repeat;
+}
+
+.copyright {
+  color: #868686;
+  text-decoration: italic;
+}
+
+.support {
+  position: relative;
+  padding-right: 60px;
+  display: block;
+  float: right;
+  &:before {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    font-size: 44px;
+  }
+}

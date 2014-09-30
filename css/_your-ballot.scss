@@ -1,0 +1,48 @@
+// ==========================================================================
+// ★ YOUR BALLOT
+// ========================================================================== 
+.your-ballot {
+  background: url(../images/your-ballot-background.jpg) no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 40px 0;
+  .large-wrap {
+    padding: 0 10px;
+  }
+  .left {
+    max-width: 800px;
+    width: 100%;
+    float: left;
+  }
+  .right {
+    max-width: 345px;
+    width: 100%;
+    float: right;
+    h2 {
+      text-transform: capitalize;
+    }
+    p {
+      position: relative;
+      width: 260px;
+      padding: 20px 20px 20px 90px;
+      &:before {
+        position: absolute;
+        left: -3px;
+        margin-top: -2px;
+        font-size: 80px;
+        color: $green;
+      }
+    }
+    .large-button {
+      width: 100%;
+    }
+  }
+  h2 {
+    float: none;
+    padding: 0 0 30px;
+  }
+  p {
+
+  }
+
+}

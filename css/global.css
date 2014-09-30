@@ -260,6 +260,8 @@ body {
   text-rendering: optimizeLegibility; }
 
 #main-wrapper,
+.banner,
+.banner img,
 #main {
   width: 100%; }
 
@@ -267,7 +269,12 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  overflow: hidden; }
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .large-wrap {
   max-width: 1200px; }
@@ -276,11 +283,14 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 25px 0;
+  padding: 25px 20px;
   color: #66696c;
   font-weight: 500;
   font-size: 17px;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 #logo {
   display: block;
@@ -1043,7 +1053,7 @@ input {
     margin-top: 20px;
     color: #555; }
 .login .footer-promo {
-  padding: 80px 0; }
+  padding: 80px 20px; }
   .login .footer-promo.inner-wrap, .login .footer-promo.large-wrap {
     overflow: visible; }
   .login .footer-promo h2 {

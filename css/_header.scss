@@ -1,0 +1,65 @@
+// ==========================================================================
+// ★ HEADER
+// ==========================================================================
+#header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 20px;
+  color: $darkGray;
+  font-weight: $medium;
+  font-size: 17px;
+  overflow: hidden;
+  @include box-sizing(border-box);
+}
+#logo {
+  display: block;
+  float: left;
+  color: $green;
+  font-weight: $medium;
+  font-size: 36px;
+  span {
+    display: block;
+    font-size: 14px;
+    font-weight: $light;
+    color: $gray;
+    clear: left;
+  }
+}
+
+#main-links {
+  display: block;
+  float: right;
+  margin-top: 15px;
+  overflow: visible;
+  span,
+  a {
+    display: inline-block;
+    margin-right: 15px;
+    padding-right: 15px;
+    color: #66696c;
+    @include transition(color .15s ease-out);
+  }
+  .social {
+    display: inline-block;
+    overflow: visible;
+  }
+  .icon {
+    position: relative;
+    top: 10px;
+    margin-right: 5px;
+    padding-right: 0;
+    @include size(32px);
+    color: #dcddde;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .icon:hover,
+  a:hover {
+    color: $green;
+  }
+  .account-link {
+    border-right: 1px solid #dcdddd;
+  }
+}

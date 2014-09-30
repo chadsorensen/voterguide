@@ -1,0 +1,52 @@
+// ==========================================================================
+// ★ PROPOSITION
+// ========================================================================== 
+.proposition {
+  .left {
+    width: 100%;
+    max-width: 50%;
+    float: left;
+    padding: 0 75px 0 10px;
+
+    h2 {
+      padding: 0;
+      float: none;
+    }
+    p {
+      padding: 50px 0 40px;
+      line-height: 1.9;
+    }
+  }
+  .right {
+    width: 100%;
+    max-width: 50%;
+    .list-item {
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+    span {
+      position: relative;
+      display: block;
+      @include size(290px 232px);
+      color: #8f989c;
+      background: #dcddde;
+      text-align: center;
+      &:before {
+        position: relative;
+        top: 17px;
+        font-size: 205px;
+      }
+    }
+    h4 {
+      display: block;
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.proposition {
+  background: #f9f9f9;
+}

@@ -1,0 +1,143 @@
+// ==========================================================================
+// ★ CONTEST LIST
+// ==========================================================================
+.contests {
+  header {
+    padding: 25px 0;
+    background: #5bb7a2;
+    color: #fff;
+  }
+  h3 {
+    padding-left: 10px;
+    font-weight: $medium;
+    font-size: 20px;
+  }
+}
+
+.content-block {
+  padding: 60px 0;
+  background: #f9f9f9;
+  overflow: hidden;
+  color: #555;
+  h2 {
+    display: block;
+    float: left;
+    padding: 10px 0 0 10px;
+  }
+  .list-view-controls {
+    display: block;
+    float: right;
+    padding-right: 10px;
+    button {
+      position: relative;
+      margin-right: 10px;
+      @include size(50px);
+      background: none;
+      color: #dcddde;
+
+      &:hover,
+      &.active {
+        color: #c5c6c8;
+      }
+      &:before {
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        font-size: 54px;
+      }
+    }
+  }
+}
+
+.list-container {
+  width: 100%;
+  padding-top: 40px;
+}
+
+.list-item {
+  display: block;
+  float: left;
+  margin-bottom: 15px;
+  background: #fff;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.11);
+  border-radius: 2px;
+  @include box-sizing(border-box);
+  h4 {
+
+  }
+  p {
+
+  }
+  .more-info {
+    position: relative;
+    display: block;
+    float: right;
+    @include size(45px);
+    margin-top: -26px;
+    color: #dcddde;
+    &:before {
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      font-size: 51px;
+    }
+    &:hover {
+      color: $green;
+    }
+  }
+  .candidate-action {
+    display: inline-block;
+    color: #aeaeae;
+    &:hover,
+    .active {
+      color: $green;
+    }
+  }
+  .i-star:before {
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+    font-size: 18px;
+  }
+}
+
+.list-content {
+  padding: 25px 30px;
+  @extend .body-2;
+  text-transform: capitalize;
+  h4 {
+    margin-bottom: 10px;
+  }
+  p {
+    display: inline-block;
+    &:after {
+      @include before(1px, 14px, inline-block, relative);
+      background: #555;
+      margin: 0 5px 0 7px;
+      top: 2px;
+    }
+  }
+}
+
+.list-container {
+  .list-item {  
+    max-width: 290px;
+    margin-right: 10px;
+    &:nth-of-type(4n) {
+      margin-right: 0;
+    }
+  }
+  &.list-view {
+    .list-item {
+      width: 47.5%;
+      max-width: 580px;
+      margin-right: 5%;
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+}
