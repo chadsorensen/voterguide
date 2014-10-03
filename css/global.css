@@ -368,11 +368,14 @@ body {
     float: left;
     padding-left: 25px; }
     #home .inline input[type=text].address, .login .forms-wrapper .inline input[type=text].address {
-      width: 310px; }
+      max-width: 310px;
+      width: 30%; }
     #home .inline input[type=text].city, .login .forms-wrapper .inline input[type=text].city {
-      width: 265px; }
+      max-width: 265px;
+      width: 20%; }
     #home .inline input[type=text].zipcode, .login .forms-wrapper .inline input[type=text].zipcode {
-      width: 210px; }
+      max-width: 210px;
+      width: 20%; }
   #home .divider, .login .forms-wrapper .divider {
     position: relative;
     top: 9px;
@@ -383,12 +386,11 @@ body {
     background: #bec0c2; }
   #home .submit, .login .forms-wrapper .submit {
     display: block;
-    float: left;
-    width: 148px;
+    float: right;
+    max-width: 148px;
+    width: 15%;
     height: 65px;
     background: #5bb7a2;
-    padding-right: 40px;
-    padding-left: 40px;
     color: #fff;
     font-weight: 300;
     font-size: 18px;

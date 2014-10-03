@@ -31,15 +31,16 @@
     float: left;
     padding-left: 25px;
     &.address {
-      width: 310px;
+      max-width: 310px;
+      width: 30%;
     }
     &.city {
-      width: 265px;
-
+      max-width: 265px;
+      width: 20%;
     }
     &.zipcode {
-      width: 210px;
-
+      max-width: 210px;
+      width: 20%;
     }
   }
   .divider {
@@ -52,12 +53,11 @@
   }
   .submit {
     display: block;
-    float: left;
-    width: 148px;
+    float: right;
+    max-width: 148px;
+    width: 15%;
     height: 65px;
     background: $green;
-    padding-right: 40px;
-    padding-left: 40px;
     color: #fff;
     font-weight: $light;
     font-size: 18px;
