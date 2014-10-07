@@ -1375,6 +1375,14 @@ input {
     padding: 20px;
     background-size: cover; }
 
+  .your-ballot .large-wrap {
+    padding: 0 20px; }
+  .your-ballot .right p {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
   .content-block h2 {
     padding-top: 0; }
   .content-block .list-view-controls {
@@ -1405,6 +1413,7 @@ input {
     height: auto; }
 
   .account-item .input-holder, .account-item .login .forms-wrapper .account-sidebar.signup-form input, .login .forms-wrapper .account-sidebar.signup-form .account-item input {
+    padding: 0px 15px;
     background: #ededed;
     border-bottom: 1px solid #bec0c2; }
     .account-item .input-holder:last-child, .account-item .login .forms-wrapper .account-sidebar.signup-form input:last-child, .login .forms-wrapper .account-sidebar.signup-form .account-item input:last-child {
@@ -1412,9 +1421,9 @@ input {
     .account-item .input-holder.focus, .account-item .login .forms-wrapper .account-sidebar.signup-form input.focus, .login .forms-wrapper .account-sidebar.signup-form .account-item input.focus {
       background: #bec0c2; }
   .account-item label {
-    width: 20%; }
+    width: 30%; }
   .account-item input {
-    width: 80%; }
+    width: 70%; }
 
   .candidate .candidate-info {
     margin-left: 0; }
