@@ -21,6 +21,15 @@
         }
         input {
           margin: 0 10px 10px 0;
+          &.inline {
+            margin: 0 5% 10px 0;
+            width: 47%;
+            &.last-name {
+
+              margin-right: 0;
+              width: 48%;
+            }
+          }
           &.full-width {
             width: 100%;
             max-width: 620px;

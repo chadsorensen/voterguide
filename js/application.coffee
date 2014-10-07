@@ -4,6 +4,7 @@ $ () ->
   inputFocus()
   listToggle()
   displayCandidateContent()
+  linkStatusToggle()
 
 mobileNav = ->
   $navTrigger = $('#open-button')
@@ -29,6 +30,22 @@ listToggle = ->
       $listContainer.toggleClass 'list-view'
 
 
+linkStatusToggle = ->
+  $toggle = $('button.radio');
+  $input = $('.link-status');
+  $toggle.on 'click', (e) ->
+    e.preventDefault()
+    if $toggle.text() == 'off'
+      $toggle.text('on')
+      $input.val('on')
+      console.log '$toggle.val()', $toggle.text()
+      console.log '$input.val()', $input.text()
+    else 
+      $toggle.text('off')
+      $input.val('off')
+      console.log '$toggle.val()', $toggle.text()
+      console.log '$input.val()', $input.text()
+  
 inputFocus = ->
   $input = $('.input-holder input');
 

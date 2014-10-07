@@ -221,7 +221,8 @@ input:focus {
   font-weight: 300;
   font-size: 14px; }
 
-.medium-1, .account-item label, .account-item input {
+.medium-1, .account-item label, .account-item button,
+.account-item input {
   font-weight: 500;
   font-size: 16px; }
 
@@ -959,7 +960,7 @@ input {
   width: 45%;
   max-width: 500px;
   float: left;
-  margin: 50px 100px 0 0;
+  margin: 50px 5% 0 0;
   overflow: visible; }
   .account-item:nth-child(even) {
     margin-right: 0; }
@@ -997,22 +998,29 @@ input {
   .account-item label {
     display: block;
     float: left;
-    width: 110px;
+    max-width: 110px;
+    width: 35%;
     padding: 15px 0;
     color: #a6a9ad;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
+  .account-item button,
   .account-item input {
     display: block;
     float: right;
-    width: 280px;
+    max-width: 280px;
+    width: 65%;
     padding: 15px 12px;
     color: #555;
     background: transparent;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
+  .account-item button {
+    text-align: left;
+    height: 48px;
+    border: none; }
 
 .login .forms-wrapper .account-sidebar {
   max-height: inherit; }
@@ -1029,6 +1037,12 @@ input {
     .login .forms-wrapper .account-sidebar.signup-form input {
       margin: 0 10px 10px 0;
       border: 1px solid #dcddde; }
+      .login .forms-wrapper .account-sidebar.signup-form input.inline {
+        margin: 0 5% 10px 0;
+        width: 47%; }
+        .login .forms-wrapper .account-sidebar.signup-form input.inline.last-name {
+          margin-right: 0;
+          width: 48%; }
       .login .forms-wrapper .account-sidebar.signup-form input.full-width {
         width: 100%;
         max-width: 620px; }
@@ -1041,12 +1055,18 @@ input {
     font-size: 16px;
     font-weight: regular;
     color: #fff; }
-  .login .forms-wrapper .account-sidebar .medium-1, .login .forms-wrapper .account-sidebar .account-item label, .account-item .login .forms-wrapper .account-sidebar label, .login .forms-wrapper .account-sidebar .account-item input, .account-item .login .forms-wrapper .account-sidebar input {
+  .login .forms-wrapper .account-sidebar .medium-1, .login .forms-wrapper .account-sidebar .account-item label, .account-item .login .forms-wrapper .account-sidebar label, .login .forms-wrapper .account-sidebar .account-item button, .account-item .login .forms-wrapper .account-sidebar button,
+  .login .forms-wrapper .account-sidebar .account-item input,
+  .account-item .login .forms-wrapper .account-sidebar input {
     position: relative;
     margin: 25px 0;
     padding: 0 30px;
     color: #66696c; }
-    .login .forms-wrapper .account-sidebar .medium-1:before, .login .forms-wrapper .account-sidebar .account-item label:before, .account-item .login .forms-wrapper .account-sidebar label:before, .login .forms-wrapper .account-sidebar .account-item input:before, .account-item .login .forms-wrapper .account-sidebar input:before, .login .forms-wrapper .account-sidebar .medium-1:after, .login .forms-wrapper .account-sidebar .account-item label:after, .account-item .login .forms-wrapper .account-sidebar label:after, .login .forms-wrapper .account-sidebar .account-item input:after, .account-item .login .forms-wrapper .account-sidebar input:after {
+    .login .forms-wrapper .account-sidebar .medium-1:before, .login .forms-wrapper .account-sidebar .account-item label:before, .account-item .login .forms-wrapper .account-sidebar label:before, .login .forms-wrapper .account-sidebar .account-item button:before, .account-item .login .forms-wrapper .account-sidebar button:before,
+    .login .forms-wrapper .account-sidebar .account-item input:before,
+    .account-item .login .forms-wrapper .account-sidebar input:before, .login .forms-wrapper .account-sidebar .medium-1:after, .login .forms-wrapper .account-sidebar .account-item label:after, .account-item .login .forms-wrapper .account-sidebar label:after, .login .forms-wrapper .account-sidebar .account-item button:after, .account-item .login .forms-wrapper .account-sidebar button:after,
+    .login .forms-wrapper .account-sidebar .account-item input:after,
+    .account-item .login .forms-wrapper .account-sidebar input:after {
       content: '';
       position: absolute;
       top: 50%;
@@ -1055,7 +1075,9 @@ input {
       width: 45%;
       height: 1px;
       background: #d6d6d6; }
-    .login .forms-wrapper .account-sidebar .medium-1:after, .login .forms-wrapper .account-sidebar .account-item label:after, .account-item .login .forms-wrapper .account-sidebar label:after, .login .forms-wrapper .account-sidebar .account-item input:after, .account-item .login .forms-wrapper .account-sidebar input:after {
+    .login .forms-wrapper .account-sidebar .medium-1:after, .login .forms-wrapper .account-sidebar .account-item label:after, .account-item .login .forms-wrapper .account-sidebar label:after, .login .forms-wrapper .account-sidebar .account-item button:after, .account-item .login .forms-wrapper .account-sidebar button:after,
+    .login .forms-wrapper .account-sidebar .account-item input:after,
+    .account-item .login .forms-wrapper .account-sidebar input:after {
       left: 55%; }
   .login .forms-wrapper .account-sidebar .body-3 {
     margin-top: 20px;
@@ -1281,6 +1303,8 @@ input {
         padding: .25em .25em 0 0; }
 
   .promo,
+  .login .forms-wrapper .account-sidebar.signup-form,
+  .login .forms-wrapper .account-sidebar.signup-form input.full-width,
   .account-sidebar {
     float: none;
     max-width: 100%;
@@ -1289,6 +1313,14 @@ input {
   .promo {
     max-height: inherit;
     margin-bottom: 10px; }
+
+  .account-sidebar {
+    margin-bottom: 25px; }
+    .account-sidebar p {
+      text-align: center; }
+
+  .login .forms-wrapper .account-sidebar.signup-form .italic {
+    margin-top: 20px; }
 
   .account-sidebar .input-holder label, .login .forms-wrapper .account-sidebar.signup-form input label,
   .login .forms-wrapper .account-sidebar.signup-form input label {
@@ -1421,9 +1453,13 @@ input {
     .account-item .input-holder.focus, .account-item .login .forms-wrapper .account-sidebar.signup-form input.focus, .login .forms-wrapper .account-sidebar.signup-form .account-item input.focus {
       background: #bec0c2; }
   .account-item label {
-    width: 30%; }
+    width: 20%; }
+    .account-item label.radio {
+      width: 35%; }
   .account-item input {
-    width: 70%; }
+    width: 80%; }
+    .account-item input.radio {
+      width: 65%; }
 
   .candidate .candidate-info {
     margin-left: 0; }

@@ -30,7 +30,7 @@
   width: 45%;
   max-width: 500px;
   float: left;
-  margin: 50px 100px 0 0;
+  margin: 50px 5% 0 0;
   overflow: visible;
   &:nth-child(even) {
     margin-right: 0;
@@ -70,21 +70,28 @@
   label {
     display: block;
     float: left;
-    width: 110px;
+    max-width: 110px;
+    width: 35%;
     padding: 15px 0;
     color: #a6a9ad;
     @extend .medium-1;
     @include box-sizing(border-box);
   }
+  button,
   input {
     display: block;
     float: right;
-    width: 280px;
+    max-width: 280px;
+    width: 65%;
     padding: 15px 12px;
     color: #555;
     background: transparent;
     @extend .medium-1;
     @include box-sizing(border-box);
-
+  }
+  button {
+    text-align: left;
+    height: 48px;
+    border: none;
   }
 }

@@ -156,6 +156,8 @@
 
 
   .promo,
+  .login .forms-wrapper .account-sidebar.signup-form,
+  .login .forms-wrapper .account-sidebar.signup-form input.full-width,
   .account-sidebar {
     float: none;
     max-width: 100%;
@@ -165,6 +167,17 @@
   .promo {
     max-height: inherit;
     margin-bottom: 10px;
+  }
+
+  .account-sidebar {
+    margin-bottom: 25px;
+    p {
+      text-align: center;
+    }
+  }
+
+  .login .forms-wrapper .account-sidebar.signup-form .italic {
+    margin-top: 20px;
   }
 
   .account-sidebar .input-holder label,
@@ -347,10 +360,16 @@
       }
     }
     label {
-      width: 30%;
+      width: 20%;
+      &.radio {
+        width: 35%;
+      }
     }
     input {
-      width: 70%;
+      width: 80%;
+      &.radio {
+        width: 65%;
+      }
     }
   }
 
