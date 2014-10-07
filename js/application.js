@@ -9,7 +9,8 @@
     inputFocus();
     listToggle();
     displayCandidateContent();
-    return linkStatusToggle();
+    linkStatusToggle();
+    return FastClick.attach(document.body);
   });
 
   mobileNav = function() {

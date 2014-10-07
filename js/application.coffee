@@ -6,6 +6,8 @@ $ () ->
   displayCandidateContent()
   linkStatusToggle()
 
+  FastClick.attach(document.body)
+
 mobileNav = ->
   $navTrigger = $('#open-button')
   $closeButton = $('#close-button')

@@ -1,6 +1,7 @@
 base:
   version: VERSION
   js:
+    js/fastclick.js: {}
     js/application.js: {}
   dependencies:
     - core/jquery
