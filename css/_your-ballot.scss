@@ -11,20 +11,21 @@
   }
   .left {
     max-width: 800px;
-    width: 100%;
+    width: 60%;
     float: left;
   }
   .right {
     max-width: 345px;
-    width: 100%;
+    width: 30%;
     float: right;
     h2 {
       text-transform: capitalize;
     }
     p {
       position: relative;
-      width: 260px;
+      width: 100%;
       padding: 20px 20px 20px 90px;
+      @include box-sizing(border-box);
       &:before {
         position: absolute;
         left: -3px;

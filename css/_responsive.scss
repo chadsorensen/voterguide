@@ -1,5 +1,7 @@
 @media only screen and (max-width: $tablet) {
-
+  h1, h2, h3, h4, h5 {
+    line-height: 1.2;
+  }
   #logo {
     margin-left: 50px;
   }
@@ -203,9 +205,6 @@
   html, body {
     overflow-x: hidden;
   }
-  h1, h2, h3, h4, h5 {
-    line-height: 1.2;
-  }
   .election-form .left,
   .election-form .right,
   .your-ballot .left,
@@ -292,6 +291,10 @@
   .footer-tagline {
     padding: 20px;
     background-size: cover;
+  }
+//Your Ballot
+  .your-ballot .right p:before {
+    margin-top: -15px;
   }
 
 //Contests

@@ -915,18 +915,21 @@ input {
     padding: 0 10px; }
   .your-ballot .left {
     max-width: 800px;
-    width: 100%;
+    width: 60%;
     float: left; }
   .your-ballot .right {
     max-width: 345px;
-    width: 100%;
+    width: 30%;
     float: right; }
     .your-ballot .right h2 {
       text-transform: capitalize; }
     .your-ballot .right p {
       position: relative;
-      width: 260px;
-      padding: 20px 20px 20px 90px; }
+      width: 100%;
+      padding: 20px 20px 20px 90px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
       .your-ballot .right p:before {
         position: absolute;
         left: -3px;
@@ -1126,6 +1129,9 @@ input {
     font-size: 44px; }
 
 @media only screen and (max-width: 780px) {
+  h1, h2, h3, h4, h5 {
+    line-height: 1.2; }
+
   #logo {
     margin-left: 50px; }
 
@@ -1340,9 +1346,6 @@ input {
   html, body {
     overflow-x: hidden; }
 
-  h1, h2, h3, h4, h5 {
-    line-height: 1.2; }
-
   .election-form .left,
   .election-form .right,
   .your-ballot .left,
@@ -1406,6 +1409,9 @@ input {
   .footer-tagline {
     padding: 20px;
     background-size: cover; }
+
+  .your-ballot .right p:before {
+    margin-top: -15px; }
 
   .your-ballot .large-wrap {
     padding: 0 20px; }
