@@ -132,7 +132,7 @@
     .account-link {
       border-right: 0;
     }
-    a, 
+    a,
     span {
       display: block;
       padding: 0.8em;
@@ -167,7 +167,7 @@
     margin-bottom: 10px;
   }
 
-  .account-sidebar .input-holder label, 
+  .account-sidebar .input-holder label,
   .login .forms-wrapper .account-sidebar.signup-form input label {
     max-width: 10%;
     width: 10%;
@@ -193,6 +193,31 @@
   h1, h2, h3, h4, h5 {
     line-height: 1.2;
   }
+  .election-form .left,
+  .election-form .right,
+  .your-ballot .left,
+  .your-ballot .right,
+  .proposition .left,
+  .proposition .right,
+  .login .forms-wrapper .account-sidebar.signup-form,
+  .list-item,
+  .account-item,
+  .large-button,
+  .col-2,
+  img,
+  .left,
+  .right {
+    float: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .left {
+    margin-bottom: 15px;
+  }
+
+//Home
+
   #home {
     .inline label {
       display: none;
@@ -233,5 +258,126 @@
     input {
       width: 75%;
     }
+  }
+
+  .election-form {
+    p {
+      margin-bottom: 20px;
+    }
+    form {
+      input[type="email"] {
+        width: 70%;
+      }
+      input[type="submit"] {
+        width: 30%;
+        padding: 15px 0;
+        text-align: center;
+      }
+    }
+  }
+
+  .footer-tagline {
+    padding: 20px;
+    background-size: cover;
+  }
+
+//Contests
+  .content-block {
+    h2 {
+      padding-top: 0;
+    }
+    .list-view-controls {
+        padding-right: 0;
+        padding-top: 15px;
+      button {
+        @include size(26px);
+        margin-right: 5px;
+        &:before {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+
+  .list-container,
+  .list-container.list-view {
+    .list-item {
+      float: none;
+      max-width: 100%;
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+//Proposition
+  .proposition {
+    .left {
+      margin-bottom: 15px;
+      padding: 0;
+    }
+    .right span {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+//Settings
+  .account-item {
+    .input-holder {
+      background: #ededed;
+      border-bottom: 1px solid #bec0c2;
+      &:last-child {
+        border-bottom: none;
+      }
+      &.focus {
+        background: #bec0c2;
+      }
+    }
+    label {
+      width: 20%;
+    }
+    input {
+      width: 80%;
+    }
+  }
+
+//Candidate
+  .candidate {
+    .candidate-info {
+      margin-left: 0;
+    }
+    nav {
+      width: 100%;
+      float: none;
+    }
+    .content-container {
+      padding: 20px;
+    }
+    .video-container a {
+      float: none;
+      width: 100%;
+    }
+    .notes textarea {
+      height: auto;
+    }
+  }
+
+//Login
+  .login {
+    .account-sidebar input {
+      &.first-name,
+      &.last-name {
+        width: 100%;
+      }
+
+    }
+  }
+
+//Footer
+  .copyright {
+    margin: 15px 0;
   }
 }

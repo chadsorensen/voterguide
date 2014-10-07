@@ -1090,7 +1090,7 @@ input {
 
 .copyright {
   color: #868686;
-  text-decoration: italic; }
+  font-style: italic; }
 
 .support {
   position: relative;
@@ -1311,6 +1311,27 @@ input {
   h1, h2, h3, h4, h5 {
     line-height: 1.2; }
 
+  .election-form .left,
+  .election-form .right,
+  .your-ballot .left,
+  .your-ballot .right,
+  .proposition .left,
+  .proposition .right,
+  .login .forms-wrapper .account-sidebar.signup-form,
+  .list-item,
+  .account-item,
+  .large-button,
+  .col-2,
+  img,
+  .left,
+  .right {
+    float: none;
+    max-width: 100%;
+    width: 100%; }
+
+  .left {
+    margin-bottom: 15px; }
+
   #home .inline label, .login .forms-wrapper .inline label {
     display: none; }
   #home .inline input[type=text], .login .forms-wrapper .inline input[type=text] {
@@ -1339,6 +1360,79 @@ input {
     max-width: inherit;
     width: 24%; }
   .account-sidebar input {
-    width: 75%; } }
+    width: 75%; }
+
+  .election-form p {
+    margin-bottom: 20px; }
+  .election-form form input[type="email"] {
+    width: 70%; }
+  .election-form form input[type="submit"] {
+    width: 30%;
+    padding: 15px 0;
+    text-align: center; }
+
+  .footer-tagline {
+    padding: 20px;
+    background-size: cover; }
+
+  .content-block h2 {
+    padding-top: 0; }
+  .content-block .list-view-controls {
+    padding-right: 0;
+    padding-top: 15px; }
+    .content-block .list-view-controls button {
+      height: 26px;
+      width: 26px;
+      margin-right: 5px; }
+      .content-block .list-view-controls button:before {
+        font-size: 26px; }
+
+  .list-container .list-item,
+  .list-container.list-view .list-item {
+    float: none;
+    max-width: 100%;
+    width: 100%; }
+    .list-container .list-item img,
+    .list-container.list-view .list-item img {
+      width: 100%;
+      height: auto; }
+
+  .proposition .left {
+    margin-bottom: 15px;
+    padding: 0; }
+  .proposition .right span {
+    width: 100%;
+    height: auto; }
+
+  .account-item .input-holder, .account-item .login .forms-wrapper .account-sidebar.signup-form input, .login .forms-wrapper .account-sidebar.signup-form .account-item input {
+    background: #ededed;
+    border-bottom: 1px solid #bec0c2; }
+    .account-item .input-holder:last-child, .account-item .login .forms-wrapper .account-sidebar.signup-form input:last-child, .login .forms-wrapper .account-sidebar.signup-form .account-item input:last-child {
+      border-bottom: none; }
+    .account-item .input-holder.focus, .account-item .login .forms-wrapper .account-sidebar.signup-form input.focus, .login .forms-wrapper .account-sidebar.signup-form .account-item input.focus {
+      background: #bec0c2; }
+  .account-item label {
+    width: 20%; }
+  .account-item input {
+    width: 80%; }
+
+  .candidate .candidate-info {
+    margin-left: 0; }
+  .candidate nav {
+    width: 100%;
+    float: none; }
+  .candidate .content-container {
+    padding: 20px; }
+  .candidate .video-container a {
+    float: none;
+    width: 100%; }
+  .candidate .notes textarea {
+    height: auto; }
+
+  .login .account-sidebar input.first-name, .login .account-sidebar input.last-name {
+    width: 100%; }
+
+  .copyright {
+    margin: 15px 0; } }
 
 /*# sourceMappingURL=global.css.map */
