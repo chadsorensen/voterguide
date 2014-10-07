@@ -37,7 +37,10 @@
     {% endif %} #}
     <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home" id="logo">Alaska Voter Guide <span>The Most Informed Voters In The U.S.</span></a>
 
+    <button class="menu-button" id="open-button">Open Menu</button>
+
     <nav id="main-links">
+      <button class="close-button" id="close-button">Close Menu</button>
       <a href="#!" class="account-link" title="Log In">Log In</a>
       <a href="#!" class="account-link" title="Sign Up">Sign Up</a>
       <div class="social">
@@ -97,7 +100,7 @@
 
       {{ page.index }}
 
-      {{ page.contests }}
+{#       {{ page.contests }}
 
       {{ page.proposition }}
 
@@ -107,7 +110,7 @@
       
       {{ page.login }}
 
-      {{ feed_icons }}
+      {{ feed_icons }} #}
     </section></main> <!-- /.section, /#content -->
 
   </div></div><!-- /#main, /#main-wrapper -->

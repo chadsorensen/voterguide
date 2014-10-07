@@ -10,8 +10,8 @@
 // ==========================================================================
 // ★ BREAKPOINTS VARIABLES
 // ==========================================================================
-$tablet: 950px;
-$mobile: 550px;
+$tablet: 780px;
+$mobile: 560px;
 
 
 
@@ -63,3 +63,4 @@ body {
 @import '_account';
 @import '_login';
 @import '_footer';
+@import '_responsive';

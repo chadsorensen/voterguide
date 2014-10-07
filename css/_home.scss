@@ -149,7 +149,9 @@
     label {
       display: block;
       float: left;
-      @include size(50px);
+      max-width: 50px;
+      height: 50px;
+      width: 19%;
       display: block;
       background: #dcddde;
       border-radius: 3px 0 0 3px;
@@ -162,6 +164,7 @@
     display: block;
     float: left;
     max-width: 245px;
+    width: 81%;
     height: 50px;
     color: #a6a9ad;
     font-size: 16px;

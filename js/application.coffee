@@ -1,8 +1,20 @@
 $ = jQuery.noConflict()
 $ () ->
+  mobileNav()
   inputFocus()
   listToggle()
   displayCandidateContent()
+
+mobileNav = ->
+  $navTrigger = $('#open-button')
+  $closeButton = $('#close-button')
+  $body = $('body');
+
+  $navTrigger.on 'click', (e) ->
+    $body.toggleClass 'show-menu'
+
+  $closeButton.on 'click', (e) ->
+    $body.removeClass 'show-menu'
 
 listToggle = ->
   $listButtons = $('.list-view-controls button')

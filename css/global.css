@@ -305,6 +305,10 @@ body {
     color: #8f989c;
     clear: left; }
 
+.close-button,
+.menu-button {
+  display: none; }
+
 #main-links, .candidate .social {
   display: block;
   float: right;
@@ -468,8 +472,9 @@ body {
     .account-sidebar .input-holder label, .login .forms-wrapper .account-sidebar.signup-form input label {
       display: block;
       float: left;
+      max-width: 50px;
       height: 50px;
-      width: 50px;
+      width: 19%;
       display: block;
       background: #dcddde;
       border-radius: 3px 0 0 3px; }
@@ -479,6 +484,7 @@ body {
     display: block;
     float: left;
     max-width: 245px;
+    width: 81%;
     height: 50px;
     color: #a6a9ad;
     font-size: 16px;
@@ -1096,5 +1102,243 @@ input {
     right: 0;
     top: -20px;
     font-size: 44px; }
+
+@media only screen and (max-width: 780px) {
+  #logo {
+    margin-left: 50px; }
+
+  .show-menu {
+    overflow: hidden; }
+    .show-menu #main-wrapper:before {
+      display: block; }
+
+  .show-menu #main-wrapper:before {
+    opacity: 1;
+    -webkit-transition: opacity 0.8s;
+    -moz-transition: opacity 0.8s;
+    transition: opacity 0.8s;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
+
+  #main-wrapper:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    content: '';
+    opacity: 0;
+    display: none;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -o-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    -webkit-transition: opacity 0.4s, -webkit-transform 0s 0.4s;
+    -moz-transition: opacity 0.4s, -moz-transform 0s 0.4s;
+    transition: opacity 0.4s, transform 0s 0.4s;
+    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
+
+  .menu-button {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    margin: 15px 0 0;
+    padding: 0;
+    width: 1.5em;
+    height: 1.25em;
+    border: none;
+    text-indent: 2.5em;
+    font-size: 1em;
+    color: transparent;
+    background: transparent; }
+    .menu-button:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(#5bb7a2 20%, transparent 20%, transparent 40%, #5bb7a2 40%, #5bb7a2 60%, transparent 60%, transparent 80%, #5bb7a2 80%); }
+
+  .show-menu #main-links, .show-menu .candidate .social, .candidate .show-menu .social,
+  .show-menu #main-links span,
+  .show-menu .candidate .social span,
+  .candidate .show-menu .social span,
+  .show-menu #main-links a,
+  .show-menu .candidate .social a,
+  .candidate .show-menu .social a {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 0.8s;
+    -moz-transition: -moz-transform 0.8s;
+    transition: transform 0.8s;
+    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1); }
+
+  .show-menu #main-links, .show-menu .candidate .social, .candidate .show-menu .social {
+    -webkit-transform: translate3d(-20px, 0, 0);
+    -moz-transform: translate3d(-20px, 0, 0);
+    -ms-transform: translate3d(-20px, 0, 0);
+    -o-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0); }
+
+  .show-menu #main-links a, .show-menu .candidate .social a, .candidate .show-menu .social a,
+  .show-menu #main-links span,
+  .show-menu .candidate .social span,
+  .candidate .show-menu .social span {
+    -webkit-transition-duration: 0.9s;
+    transition-duration: 0.9s; }
+
+  .close-button {
+    position: absolute;
+    display: block;
+    width: 1em;
+    height: 1em;
+    right: 1em;
+    top: 1em;
+    overflow: hidden;
+    text-indent: 1em;
+    font-size: 0.75em;
+    border: none;
+    background: transparent;
+    color: transparent; }
+    .close-button:before, .close-button:after {
+      content: '';
+      position: absolute;
+      width: 3px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      background: #bdc3c7; }
+    .close-button:before {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    .close-button:after {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg); }
+
+  #main-links, .candidate .social {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 2.5em 1.5em 0;
+    background: #383A38;
+    font-size: 1.15em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform: translate3d(-320px, 0, 0);
+    -moz-transform: translate3d(-320px, 0, 0);
+    -ms-transform: translate3d(-320px, 0, 0);
+    -o-transform: translate3d(-320px, 0, 0);
+    transform: translate3d(-320px, 0, 0);
+    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    z-index: 1001; }
+    #main-links .account-link, .candidate .social .account-link {
+      border-right: 0; }
+    #main-links a, .candidate .social a,
+    #main-links span,
+    .candidate .social span {
+      display: block;
+      padding: 0.8em;
+      color: #fff;
+      -webkit-transform: translate3d(0, 500px, 0);
+      -moz-transform: translate3d(0, 500px, 0);
+      -ms-transform: translate3d(0, 500px, 0);
+      -o-transform: translate3d(0, 500px, 0);
+      transform: translate3d(0, 500px, 0); }
+    #main-links .social, .candidate .social .social {
+      display: block;
+      text-align: center; }
+      #main-links .social span, .candidate .social .social span {
+        padding: .8em .8em 0 .8em;
+        text-align: left; }
+      #main-links .social a, .candidate .social .social a {
+        display: inline-block;
+        top: 0;
+        padding: .25em .25em 0 0; }
+
+  .promo,
+  .account-sidebar {
+    float: none;
+    max-width: 100%;
+    width: 100%; }
+
+  .promo {
+    max-height: inherit;
+    margin-bottom: 10px; }
+
+  .account-sidebar .input-holder label, .login .forms-wrapper .account-sidebar.signup-form input label,
+  .login .forms-wrapper .account-sidebar.signup-form input label {
+    max-width: 10%;
+    width: 10%; }
+
+  .account-sidebar input {
+    max-width: 620px;
+    width: 90%; }
+
+  .your-ballot .left {
+    width: 55%; }
+
+  .your-ballot .right {
+    width: 40%; } }
+@media only screen and (max-width: 560px) {
+  html, body {
+    overflow-x: hidden; }
+
+  h1, h2, h3, h4, h5 {
+    line-height: 1.2; }
+
+  #home .inline label, .login .forms-wrapper .inline label {
+    display: none; }
+  #home .inline input[type=text], .login .forms-wrapper .inline input[type=text] {
+    display: block;
+    float: none;
+    padding-left: 25px;
+    border-bottom: 1px solid #bec0c2; }
+    #home .inline input[type=text].address, .login .forms-wrapper .inline input[type=text].address {
+      max-width: 100%;
+      width: 100%; }
+    #home .inline input[type=text].city, .login .forms-wrapper .inline input[type=text].city {
+      max-width: 100%;
+      width: 100%; }
+    #home .inline input[type=text].zipcode, .login .forms-wrapper .inline input[type=text].zipcode {
+      max-width: 100%;
+      width: 100%; }
+  #home .divider, .login .forms-wrapper .divider {
+    display: none; }
+  #home .submit, .login .forms-wrapper .submit {
+    float: none;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0 0 3px 3px; }
+
+  .account-sidebar .input-holder label, .login .forms-wrapper .account-sidebar.signup-form input label {
+    max-width: inherit;
+    width: 24%; }
+  .account-sidebar input {
+    width: 75%; } }
 
 /*# sourceMappingURL=global.css.map */

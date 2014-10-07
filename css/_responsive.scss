@@ -1,0 +1,237 @@
+@media only screen and (max-width: $tablet) {
+
+  #logo {
+    margin-left: 50px;
+  }
+
+.show-menu {
+  overflow: hidden;
+  #main-wrapper:before {
+    display: block;
+  }
+}
+
+//Menu Flyout Overlay
+  .show-menu #main-wrapper:before {
+    opacity: 1;
+    @include transition(opacity .8s);
+    @include transform(translate3d(0,0,0));
+
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  }
+  #main-wrapper:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    content: '';
+    opacity: 0;
+    display: none;
+
+    @include transform(translate3d(100%,0,0));
+    @include transition(opacity 0.4s, transform 0s 0.4s);
+
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  }
+
+//Main Nav
+  .menu-button {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    margin: 15px 0 0;
+    padding: 0;
+    width: 1.5em;
+    height: 1.25em;
+    border: none;
+    text-indent: 2.5em;
+    font-size: 1em;
+    color: transparent;
+    background: transparent;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient($green 20%, transparent 20%, transparent 40%, $green 40%, $green 60%, transparent 60%, transparent 80%, $green 80%);
+    }
+  }
+
+  .show-menu #main-links,
+  .show-menu #main-links span,
+  .show-menu #main-links a {
+    @include transform(translate3d(0,0,0));
+    @include transition(transform .8s);
+
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  }
+  .show-menu #main-links {
+    @include transform(translate3d(-20px,0,0));
+  }
+  .show-menu #main-links a,
+  .show-menu #main-links span {
+    -webkit-transition-duration: 0.9s;
+    transition-duration: 0.9s;
+  }
+
+  .close-button {
+    position: absolute;
+    display: block;
+    width: 1em;
+    height: 1em;
+    right: 1em;
+    top: 1em;
+    overflow: hidden;
+    text-indent: 1em;
+    font-size: 0.75em;
+    border: none;
+    background: transparent;
+    color: transparent;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      width: 3px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      background: #bdc3c7;
+    }
+    &:before {
+      @include transform(rotate(-45deg));
+    }
+    &:after {
+      @include transform(rotate(45deg));
+    }
+  }
+
+  #main-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 2.5em 1.5em 0;
+    background: #383A38;
+    font-size: 1.15em;
+    @include box-sizing(border-box);
+    @include transform(translate3d(-320px,0,0));
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+
+    z-index: 1001;
+    .account-link {
+      border-right: 0;
+    }
+    a, 
+    span {
+      display: block;
+      padding: 0.8em;
+      color: #fff;
+      @include transform(translate3d(0,500px,0));
+    }
+    .social {
+      display: block;
+      text-align: center;
+      span {
+        padding: .8em .8em 0 .8em;
+        text-align: left;
+      }
+      a {
+        display: inline-block;
+        top: 0;
+        padding: .25em .25em 0 0;
+      }
+    }
+  }
+
+
+  .promo,
+  .account-sidebar {
+    float: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .promo {
+    max-height: inherit;
+    margin-bottom: 10px;
+  }
+
+  .account-sidebar .input-holder label, 
+  .login .forms-wrapper .account-sidebar.signup-form input label {
+    max-width: 10%;
+    width: 10%;
+  }
+
+  .account-sidebar input {
+    max-width: 620px;
+    width: 90%;
+  }
+
+  .your-ballot .left {
+    width: 55%;
+  }
+  .your-ballot .right {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  html, body {
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5 {
+    line-height: 1.2;
+  }
+  #home {
+    .inline label {
+      display: none;
+    }
+    .inline input[type=text] {
+      display: block;
+      float: none;
+      padding-left: 25px;
+      border-bottom: 1px solid #bec0c2;
+      &.address {
+        max-width: 100%;
+        width: 100%;
+      }
+      &.city {
+        max-width: 100%;
+        width: 100%;
+      }
+      &.zipcode {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+    .divider {
+      display: none;
+    }
+    .submit {
+      float: none;
+      max-width: 100%;
+      width: 100%;
+      border-radius: 0 0 3px 3px;
+    }
+  }
+  .account-sidebar {
+    .input-holder label {
+      max-width: inherit;
+      width: 24%;
+    }
+    input {
+      width: 75%;
+    }
+  }
+}

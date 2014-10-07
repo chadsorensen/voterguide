@@ -27,6 +27,11 @@
   }
 }
 
+.close-button,
+.menu-button {
+  display: none;
+}
+
 #main-links {
   display: block;
   float: right;
