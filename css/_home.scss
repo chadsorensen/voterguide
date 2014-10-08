@@ -20,15 +20,16 @@
     overflow: hidden;
   }
   .inline label {
-    @include size(65px);
-    float: left;
     display: block;
+    float: left;
+    @include size(65px);
     background: $green;
     border-radius: 3px 0 0 3px;
   }
   .inline input[type=text] {
     display: block;
     float: left;
+    height: 65px;
     padding-left: 25px;
     &.address {
       max-width: 310px;
@@ -151,7 +152,7 @@
       float: left;
       max-width: 50px;
       height: 50px;
-      width: 19%;
+      width: 17%;
       display: block;
       background: #dcddde;
       border-radius: 3px 0 0 3px;
@@ -164,7 +165,7 @@
     display: block;
     float: left;
     max-width: 245px;
-    width: 81%;
+    width: 83%;
     height: 50px;
     color: #a6a9ad;
     font-size: 16px;
@@ -210,7 +211,7 @@ form {
 }
 input {
   margin: 0;
-  padding: 20px 12px;
+  padding: 0 12px;
   border: none;
   color: #a6a9ad;
   font-weight: $light;

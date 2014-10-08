@@ -46,7 +46,34 @@ body {
   max-width: 1200px;
 }
 
+//Hovers
+a,
+button,
+label,
+input,
+textarea,
+.i-right-arrow:before,
+.input-holder {
+  @include transition(all .2s ease-out);
+}
 
+#home .submit:hover,
+.election-form form input[type="submit"]:hover {
+  background: darken($green, 10%);
+}
+.candidate .social a.icon:hover,
+.support:hover {
+  color: darken($green, 10%);
+}
+
+.account-sidebar input[type="submit"]:hover,
+.large-button:hover,
+.account .large-button:hover {
+  background: $green;
+}
+// .darken:hover {
+//   background: darken(70%);
+// }
 // ==========================================================================
 // ★ IMPORTS
 // ========================================================================== 

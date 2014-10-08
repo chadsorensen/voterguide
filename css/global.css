@@ -280,6 +280,32 @@ body {
 .large-wrap {
   max-width: 1200px; }
 
+a,
+button,
+label,
+input,
+textarea,
+.i-right-arrow:before,
+.input-holder,
+.login .forms-wrapper .account-sidebar.signup-form input {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
+
+#home .submit:hover, .login .forms-wrapper .submit:hover,
+.election-form form input[type="submit"]:hover {
+  background: #449b87; }
+
+.candidate .social a.icon:hover,
+.support:hover {
+  color: #449b87; }
+
+.account-sidebar input[type="submit"]:hover,
+.large-button:hover,
+.account .large-button:hover,
+.candidate .large-button:hover {
+  background: #5bb7a2; }
+
 #header {
   width: 100%;
   max-width: 1200px;
@@ -362,15 +388,16 @@ body {
     border-radius: 3px;
     overflow: hidden; }
   #home .inline label, .login .forms-wrapper .inline label {
+    display: block;
+    float: left;
     height: 65px;
     width: 65px;
-    float: left;
-    display: block;
     background: #5bb7a2;
     border-radius: 3px 0 0 3px; }
   #home .inline input[type=text], .login .forms-wrapper .inline input[type=text] {
     display: block;
     float: left;
+    height: 65px;
     padding-left: 25px; }
     #home .inline input[type=text].address, .login .forms-wrapper .inline input[type=text].address {
       max-width: 310px;
@@ -475,7 +502,7 @@ body {
       float: left;
       max-width: 50px;
       height: 50px;
-      width: 19%;
+      width: 17%;
       display: block;
       background: #dcddde;
       border-radius: 3px 0 0 3px; }
@@ -485,7 +512,7 @@ body {
     display: block;
     float: left;
     max-width: 245px;
-    width: 81%;
+    width: 83%;
     height: 50px;
     color: #a6a9ad;
     font-size: 16px;
@@ -523,7 +550,7 @@ form {
 
 input {
   margin: 0;
-  padding: 20px 12px;
+  padding: 0 12px;
   border: none;
   color: #a6a9ad;
   font-weight: 300;
@@ -539,6 +566,8 @@ input {
       width: 65px;
       background: #5bb7a2; }
 
+.contests .large-wrap {
+  padding: 0; }
 .contests header {
   padding: 25px 0;
   background: #5bb7a2;
@@ -549,7 +578,7 @@ input {
   font-size: 20px; }
 
 .content-block {
-  padding: 60px 0;
+  padding: 60px 20px;
   background: #f9f9f9;
   overflow: hidden;
   color: #555; }
@@ -731,21 +760,6 @@ input {
       display: block; }
     .candidate .content-container h4 {
       margin-bottom: 25px; }
-  .candidate .notes {
-    background: #fff;
-    padding: 55px 0 80px; }
-    .candidate .notes h3 {
-      margin-bottom: 35px; }
-    .candidate .notes textarea {
-      width: 100%;
-      height: 245px;
-      padding: 30px;
-      border: 1px solid #e9e9e9;
-      font-weight: 300;
-      resize: none;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box; }
   .candidate .statement p {
     margin-bottom: 40px;
     line-height: 1.8; }
@@ -837,7 +851,28 @@ input {
         background: #ffc600; }
       .candidate .contributors .graph-key p.other:before {
         background: #e76049; }
+  .candidate .notes {
+    background: #fff;
+    padding: 55px 0 80px; }
+    .candidate .notes h3 {
+      margin-bottom: 35px; }
+    .candidate .notes textarea {
+      width: 100%;
+      height: 245px;
+      padding: 30px;
+      border: 1px solid #e9e9e9;
+      font-weight: 300;
+      resize: none;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+      .candidate .notes textarea:focus {
+        box-shadow: 0px 0px 5px #5bb7a2;
+        outline: 0;
+        border: 1px solid #5bb7a2; }
 
+.proposition .large-wrap {
+  padding: 0; }
 .proposition .left {
   width: 100%;
   max-width: 50%;
@@ -1051,7 +1086,8 @@ input {
         max-width: 620px; }
     .login .forms-wrapper .account-sidebar.signup-form .italic {
       max-width: 300px;
-      margin: 0 auto; }
+      margin-right: auto;
+      margin-left: auto; }
   .login .forms-wrapper .account-sidebar .large-button {
     float: none;
     margin: 0 auto;
@@ -1128,9 +1164,22 @@ input {
     top: -20px;
     font-size: 44px; }
 
+@media only screen and (max-width: 800px) {
+  .col-2 {
+    float: none;
+    max-width: 100%;
+    width: 100%; } }
 @media only screen and (max-width: 780px) {
   h1, h2, h3, h4, h5 {
     line-height: 1.2; }
+
+  .promo,
+  .login .forms-wrapper .account-sidebar.signup-form,
+  .login .forms-wrapper .account-sidebar.signup-form input.full-width,
+  .account-sidebar {
+    float: none;
+    max-width: 100%;
+    width: 100%; }
 
   #logo {
     margin-left: 50px; }
@@ -1307,14 +1356,6 @@ input {
         display: inline-block;
         top: 0;
         padding: .25em .25em 0 0; }
-
-  .promo,
-  .login .forms-wrapper .account-sidebar.signup-form,
-  .login .forms-wrapper .account-sidebar.signup-form input.full-width,
-  .account-sidebar {
-    float: none;
-    max-width: 100%;
-    width: 100%; }
 
   .promo {
     max-height: inherit;

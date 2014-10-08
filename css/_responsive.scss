@@ -1,17 +1,37 @@
+@media only screen and (max-width: 800px) {
+  .col-2 {
+    float: none;
+    max-width: 100%;
+    width: 100%;
+  }
+}
 @media only screen and (max-width: $tablet) {
+//Reset line-heights
   h1, h2, h3, h4, h5 {
     line-height: 1.2;
   }
+
+//Remove floats and kick out full width
+  .promo,
+  .login .forms-wrapper .account-sidebar.signup-form,
+  .login .forms-wrapper .account-sidebar.signup-form input.full-width,
+  .account-sidebar {
+    float: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
   #logo {
     margin-left: 50px;
   }
 
-.show-menu {
-  overflow: hidden;
-  #main-wrapper:before {
-    display: block;
+  .show-menu {
+    overflow: hidden;
+    #main-wrapper:before {
+      display: block;
+    }
   }
-}
+
 
 //Menu Flyout Overlay
   .show-menu #main-wrapper:before {
@@ -154,16 +174,6 @@
         padding: .25em .25em 0 0;
       }
     }
-  }
-
-
-  .promo,
-  .login .forms-wrapper .account-sidebar.signup-form,
-  .login .forms-wrapper .account-sidebar.signup-form input.full-width,
-  .account-sidebar {
-    float: none;
-    max-width: 100%;
-    width: 100%;
   }
 
   .promo {
