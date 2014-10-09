@@ -1152,6 +1152,8 @@ input {
   width: 100%;
   background: #363636;
   padding: 30px 0; }
+  #footer .right {
+    padding-top: 15px; }
 
 .footer-logo {
   display: block;
