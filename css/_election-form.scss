@@ -20,13 +20,14 @@
 
   .right {
     max-width: 410px;
-    width: 40%;
+    width: 35%;
   }
 
   form {
     position: relative;
     input[type="email"] {
       display: block;
+      width: 75%;
       float: left;
       padding: 15px 20px;
       border-radius: 2px 0 0 2px;
@@ -34,7 +35,8 @@
     input[type="submit"] {
       display: block;
       float: left;
-      padding: 15px 20px;
+      width: 25%;
+      padding: 15px 0;
       background: $green;
       color: #fff;
       text-transform: uppercase;

@@ -133,6 +133,9 @@ p {
   padding: 0;
   line-height: 1.5; }
 
+img {
+  display: block; }
+
 a {
   text-decoration: none;
   font-weight: normal;
@@ -569,7 +572,7 @@ input {
 .contests .large-wrap {
   padding: 0; }
 .contests header {
-  padding: 25px 0;
+  padding: 25px 20px;
   background: #5bb7a2;
   color: #fff; }
 .contests h3 {
@@ -578,7 +581,7 @@ input {
   font-size: 20px; }
 
 .content-block {
-  padding: 60px 20px;
+  padding: 60px 0px 60px 20px;
   background: #f9f9f9;
   overflow: hidden;
   color: #555; }
@@ -679,6 +682,9 @@ input {
 
 .candidate {
   color: #555; }
+  .candidate .large-wrap {
+    padding-right: 0;
+    padding-left: 0; }
   .candidate.candidate {
     padding-bottom: 0px; }
   .candidate .i-left-arrow {
@@ -756,6 +762,8 @@ input {
         font-size: 36px; }
   .candidate .content-container {
     display: none; }
+    .candidate .content-container.statement {
+      padding-right: 20px; }
     .candidate .content-container.active {
       display: block; }
     .candidate .content-container h4 {
@@ -924,18 +932,20 @@ input {
     width: 60%; }
   .election-form .right {
     max-width: 410px;
-    width: 40%; }
+    width: 35%; }
   .election-form form {
     position: relative; }
     .election-form form input[type="email"] {
       display: block;
+      width: 75%;
       float: left;
       padding: 15px 20px;
       border-radius: 2px 0 0 2px; }
     .election-form form input[type="submit"] {
       display: block;
       float: left;
-      padding: 15px 20px;
+      width: 25%;
+      padding: 15px 0;
       background: #5bb7a2;
       color: #fff;
       text-transform: uppercase;
@@ -1404,6 +1414,9 @@ input {
     float: none;
     max-width: 100%;
     width: 100%; }
+
+  img {
+    height: auto; }
 
   .left {
     margin-bottom: 15px; }

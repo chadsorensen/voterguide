@@ -4,6 +4,10 @@
 .candidate {
   @extend .account;
   color: #555;
+  .large-wrap {
+    padding-right: 0;
+    padding-left: 0;
+  }
   &.candidate {
     padding-bottom: 0px;
   }
@@ -112,6 +116,9 @@
 //Content Containers
   .content-container {
     display: none;
+    &.statement {
+      padding-right: 20px;
+    }
     &.active {
       display: block;
     }
